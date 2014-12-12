@@ -1,0 +1,49 @@
+<ion-view ng-controller="LevCtrl" title="{{menuRight[5].title}}" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">
+        <!-- notas -->
+        <div class="list card">
+            <div class="item item-positive item-icon-right item-text-wrap">
+            <i class="icon ion-ios7-information-outline"></i>
+             Se requiere información del personal de la Institución Operativa</div>
+            
+        </div>
+        <!--/notas -->
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 3.1 : ESTRUCTURA -->
+                <ion-item class="item-divider item-calm">{{menuRight[6].title}}</ion-item>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.DesarrolladoParaNSJP" name="DesarrolladoParaNSJP">¿Este inmueble fue desarrollado desde su inicio para el NSJP?</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.ProyectoRelacionadoNSJP" name="ProyectoRelacionadoNSJP">¿En este inmueble se ha efectuado algún proyecto de infraestructura relacionado con la implementación del NSJP?</ion-toggle>
+
+                <ion-item class="item-divider item-stable">¿De qué tipo?</ion-item>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EfectuadoAmpliacion" name="EfectuadoAmpliacion">Ampliación</ion-toggle>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Superficie</span>
+                    <input type="tel" placeholder="Superficie de ampliación" ng-model="data.SuperficieEfectuadoAmpliacion" name="SuperficieEfectuadoAmpliacion">  
+                </label>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EfectuadoRemodelacion" name="EfectuadoRemodelacion">Remodelación</ion-toggle>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Superficie</span>
+                    <input type="tel" placeholder="Superficie de remodelación" ng-model="data.SuperficieEfectuadoRemodelacion" name="SuperficieEfectuadoRemodelacion">  
+                </label> 
+
+                <ion-item class="item-divider item-stable">¿Este inmueble cuenta con alguno de los siguientes espacios?</ion-item>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioJuiciosOrales" name="EspacioJuiciosOrales">Sala de Juicios Orales</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioAlmacenEvidencias" name="EspacioAlmacenEvidencias">Bodega o Almacén de Evidencias</ion-toggle>
+
+                <ion-item class="item-divider item-stable">Descripción de la adaptación</ion-item>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Descripción</span>
+                    <textarea placeholder="Descripción" ng-model="data.DescripcionProyectoRelacionado" name="DescripcionProyectoRelacionado" ></textarea>
+                </label>
+
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('1_2')">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

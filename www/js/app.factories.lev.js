@@ -67,7 +67,16 @@
 
                 break;
             case 'infra_imueble': break;
-            case 'infra_full': break;
+            case 'infra_full': 
+                dataJson.FK_IdEstadoFisico = [
+                    {key:1 , value:'Adecuado'} ,
+                    {key:2 , value:'Regular'} ,
+                    {key:3 , value:'Deficiente'} ,
+                    {key:4 , value:'Malo'}
+                ]
+                ;
+
+                break;
             case 'tic_simple': break;
             case 'tic_admin': break;
             case 'sp': break;

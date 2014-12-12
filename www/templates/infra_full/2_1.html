@@ -1,0 +1,29 @@
+<ion-view ng-controller="LevCtrl" title="{{menuRight[3].title}}" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 2.1 : ESTRUCTURA -->
+                <ion-item class="item-divider item-calm">{{menuRight[4].title}}</ion-item>
+
+                <ion-item class="item-divider item-stable">2.1.1 Características</ion-item>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Características</span>
+                    <textarea rows="10" placeholder="Características" ng-model="data.EstructuraCaracteristicas" name="EstructuraCaracteristicas" ></textarea>
+                </label>
+
+                <ion-item class="item-divider item-stable">2.1.2 Estado físico</ion-item>
+                <label class="item item-input item-select">                   
+                    <select ng-model="data.FK_IdEstadoFisico_Alias_EstructuraCaracteristicas__INFRA" ng-options="c.value for c in data.FK_IdEstadoFisico" name="FK_IdEstadoFisico_Alias_EstructuraCaracteristicas__INFRA"></select>
+                </label> 
+
+                
+                
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('1_2')">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

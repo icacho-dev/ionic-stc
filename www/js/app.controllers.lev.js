@@ -131,7 +131,33 @@
       },
       {
           page: '1_2',
-          title: '1.2 Distribución arquitectónica, por cuerpos y niveles',
+          title: '1.2 Distribución arquitectónica, por cuerpos y niveles',
+          ready: false,
+          msg: 'Pendiente'
+      },
+      {
+          page: '2_1',
+          title: '2 Descripción de los elementos de construcción',
+          ready: false,
+          msg: 'Pendiente',
+          divider: true
+      },
+      {
+          page: '2_1',
+          title: '2.1 Estructura',
+          ready: false,
+          msg: 'Pendiente'
+      },
+      {
+          page: '3_1',
+          title: '3 Referente a la implementación del NSJP',
+          ready: false,
+          msg: 'Pendiente',
+          divider: true
+      },
+      {
+          page: '3_1',
+          title: '3.1 Referente a la implementación del NSJP',
           ready: false,
           msg: 'Pendiente'
       }
