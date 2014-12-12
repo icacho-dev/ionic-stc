@@ -87,7 +87,33 @@
                 validateMenuRight(menuRight, '1', val_page_1, ! val_page_1 ? 'Revise Sección ( Campos Obligatorios )' : '');
 
 
-            case 'infra_imueble': break;
+            case 'infra_imueble': 
+                dataJson.FK_IdTipoMobiliarioSelect = [
+                    {key:1 , value:'Comprado'} ,
+                    {key:2 , value:'Arrendado'} ,
+                    {key:3 , value:'Serv. Admin'} ,
+                    {key:4 , value:'Otro'}
+                ],
+                dataJson.FK_IdPeriodoSustitucionSelect = [
+                    {key:1 , value:'Entre 3 y 5 años'} ,
+                    {key:2 , value:'Entre 5 y 7 años'} ,
+                    {key:3 , value:'Más de 7 años'} 
+                ],
+                dataJson.FK_IdEstadoFisicoMobiliarioSelect = [
+                    {key:1 , value:'Adecuado'} ,
+                    {key:2 , value:'Regular'} ,
+                    {key:3 , value:'Deficiente'} ,
+                    {key:4 , value:'Malo'}
+                ],
+                dataJson.FK_IdFuncionalidadMobiliarioSelect = [
+                    {key:1 , value:'Adecuado'} ,
+                    {key:2 , value:'Regular'} ,
+                    {key:3 , value:'Deficiente'} ,
+                    {key:4 , value:'Malo'}
+                ]
+                ;
+
+                break;
             case 'infra_full': break;
             case 'tic_simple': break;
             case 'tic_admin': break;

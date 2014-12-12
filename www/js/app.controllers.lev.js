@@ -69,10 +69,16 @@
     },
     {
       page: '4_1',
-      title: '4 Equipo propio del inmueble',
+      title: '4 Equipo',
       ready: false,
       msg: 'Pendiente',
       divider: true
+    },
+    {
+      page: '4_1',
+      title: '4.1 Equipo propio del inmueble',
+      ready: false,
+      msg: 'Pendiente'
     }
 	];
 	
@@ -80,7 +86,7 @@
 
 })
 //-------------------------------------
-.controller('LevInfraInmueble', function ($scope, InmuebleFactory) {
+.controller('LevInfraInmueble', function ($scope, $location) {
     console.info('LevInfraInmueble');
     // ------------------
     // --- inicializa el menu !! 
@@ -88,10 +94,17 @@
     $scope.menuRight = [
       {
           page: '1',
-          title: '1 Infraestructura',
+          title: '5 Mobiliario',
           ready: false,
           msg: 'Pendiente',
+          divider: true
       },
+      {
+        page: '1',
+        title: '5.1 Datos del Mobiliario',
+        ready: false,
+        msg: 'Pendiente'
+      }
     ];
 
     $scope.$emit('setMenu', $scope.menuRight);
