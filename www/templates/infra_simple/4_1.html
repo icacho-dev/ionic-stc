@@ -1,0 +1,69 @@
+<ion-view ng-controller="LevCtrl" title="4 Equipo propio del inmueble" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraSimpleCtrl">
+        
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 4 : EQUIPO PROPIO DEL INMUEBLE -->  
+                <ion-item class="item-divider item-calm">4 Equipo propio del inmueble</ion-item>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EqPropioSubEstacionElectrica" name="EqPropioSubEstacionElectrica">Subestación eléctrica</ion-toggle>  
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">No. de medidores Inst. Eléctrica</span>
+                    <input type="tel" placeholder="No. de medidores Inst. Eléctrica" ng-model="data.EqPropioNumeroMedidores" name="EqPropioNumeroMedidores">  
+                </label>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EqPropioPlantaEmerjencia" name="EqPropioPlantaEmerjencia">Planta de emergencia</ion-toggle>                
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Capacidad</span>
+                    <input type="tel" placeholder="Capacidad" ng-model="data.EqPropioPlantaEmerjenciaCapacidad" name="EqPropioPlantaEmerjenciaCapacidad">  
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Edad</span>
+                    <input type="tel" placeholder="Edad" ng-model="data.EqPropioPlantaEmerjenciaEdad" name="EqPropioPlantaEmerjenciaEdad">  
+                </label>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EqPropioCircuitosEmergencia" name="EqPropioCircuitosEmergencia">Circuitos de emergencia</ion-toggle> 
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EqPropioSistemaTierras" name="EqPropioSistemaTierras">Sistema de tierras</ion-toggle> 
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EqPropioPararrayos" name="EqPropioPararrayos">Pararrayos</ion-toggle> 
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EqPropioDirefentesCorrientes" name="EqPropioDirefentesCorrientes">¿Existen tomas de corriente de diferentes voltajes?</ion-toggle> 
+
+                <ion-item class="item-divider">Tipo de corriente en el inmueble</ion-item> 
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EqPropioTipoCorrienteNormal" name="EqPropioTipoCorrienteNormal">Normal</ion-toggle> 
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EqPropioTipoCorrienteRegulada" name="EqPropioTipoCorrienteRegulada">Regulada</ion-toggle> 
+                <ion-item class="item item-divider">Equipo</ion-item>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EqPropioSistemaRiego" name="EqPropioSistemaRiego">Sistema de riego</ion-toggle> 
+                
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EqPropioCisterna" name="EqPropioCisterna">Cisterna</ion-toggle> 
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Capacidad</span>
+                    <input type="tel" placeholder="Capacidad" ng-model="data.EqPropioCisternaCapacidad" name="EqPropioCisternaCapacidad">  
+                </label>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EqPropioBombeo" name="EqPropioBombeo">Equipo de bombeo</ion-toggle> 
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EqPropioHidroneumatico" name="EqPropioHidroneumatico">Equipo hidroneumatico</ion-toggle> 
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EqPropioPlanTratamiento" name="EqPropioPlanTratamiento">Planta de tratamiento</ion-toggle> 
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Capacidad</span>
+                    <input type="tel" placeholder="Capacidad" ng-model="data.EqPropioPlanTratamientoCapacidad" name="EqPropioPlanTratamientoCapacidad">  
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Uso del agua tratada</span>
+                    <textarea placeholder="Uso del agua tratada" ng-model="data.EqPropioAguaTratada" name="EqPropioAguaTratada" ></textarea>
+                </label>
+
+                <ion-item class="item-divider">Comentarios</ion-item>           
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Comentarios del equipo propio del inmueble</span>
+                    <textarea placeholder="Comentarios del equipo propio del inmueble" ng-model="data.ComentariosEquipoInmueble" name="ComentariosEquipoInmueble" ></textarea>
+                </label>
+
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('3_5')">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

@@ -22,13 +22,13 @@
 	  	page: '2_1',
 	  	title: '2.1 Ubicacion',
 	  	ready: true,
-	  	msg: 'Pendiente',
+	  	msg: 'Pendiente'
 	  },
     {
       page: '2_2',
       title: '2.2 Servicios Públicos',
       ready: false,
-      msg: 'Pendiente',
+      msg: 'Pendiente'
     },
     {
       page: '3_1',
@@ -41,31 +41,38 @@
       page: '3_1',
       title: '3.1 Físicas',
       ready: false,
-      msg: 'Pendiente',
+      msg: 'Pendiente'
     },
     {
       page: '3_2',
       title: '3.2 Acreditación de la propiedad',
       ready: false,
-      msg: 'Pendiente',
+      msg: 'Pendiente'
     },
     {
       page: '3_3',
       title: '3.3 Planos del Inmueble',
       ready: false,
-      msg: 'Pendiente',
+      msg: 'Pendiente'
     },
     {
       page: '3_4',
       title: '3.4 Obra exterior',
       ready: false,
-      msg: 'Pendiente',
+      msg: 'Pendiente'
     },
     {
       page: '3_5',
       title: '3.5 Conjunto',
       ready: false,
+      msg: 'Pendiente'
+    },
+    {
+      page: '4_1',
+      title: '4 Equipo propio del inmueble',
+      ready: false,
       msg: 'Pendiente',
+      divider: true
     }
 	];
 	
