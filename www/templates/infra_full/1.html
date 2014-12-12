@@ -1,51 +1,51 @@
 ﻿<ion-view ng-controller="LevCtrl" title="1 Descripción del Inmueble" ng-init="data = dataJson">
     <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">
-        <form novalidate name="form">
-            <div class="list card">
-                <div class="item item-dark item-icon-right">
-                <i class="icon ion-clipboard"></i>
-                Datos Generales</div>
-                <div class="item item-body item-stable">
-                <!-- pendientes:kcho -->
-                    <div>
-                        <p>Entidad
-                            <strong>lev.Entidad</strong>
-                        </p>
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 1.1 : DESCRIPCIÓN GENERAL DEL INMUEBLE -->
+                <ion-item class="item-divider item-calm">1.1 Descripción general del Inmueble</ion-item>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Descripcion general</span>
+                    <textarea rows="10" placeholder="Descripcion general" ng-model="data.DescripcionGeneral" name="DescripcionGeneral" ></textarea>
+                </label>
+
+                <div class="card">                    
+                    <ion-item class="item-divider item-calm">Dimensiones y configuración de sus construcciones</ion-item> 
+                    <div class="item item-text-wrap item-stable">
+                        <div class="card"> 
+                            <ion-item class="item-divider item-dark">Cuerpo</ion-item> 
+                            <label class="item item-input item-select">
+                                <div class="input-label">
+                                   Institución
+                                </div>
+                                <select ng-model="data.FK_IdInmuebleInstitucion" ng-options="c.value for c in data.FK_IdInmuebleInstitucionSelect"></select>
+                            </label> 
+                            <label class="item item-input item-stacked-label">
+                                <span class="label ">No. de Niveles</span>
+                                <input type="number" placeholder="No. de Niveles" ng-model="data.NumeroNiveles" name="NumeroNiveles">
+                            </label>
+                            <ion-item class="item item-input item-stacked-label">
+                                <span class="label ">Area (m2)</span>
+                                <input type="number" placeholder="Area (m2)" ng-model="data.Area" name="Area">
+                            </ion-item>
+                            <ion-item class="item-divider item-light">
+                            <button class="button button-small button-outline button-positive icon-right ion-eye">Ver detalle</button>
+                            <button class="button button-small button-outline button-assertive icon-right ion-close">Borrar</button></ion-item> 
+                        </div>  
                     </div>
-                    <div>
-                        <p>Municipio
-                            <strong>lev.Municipio</strong>
-                        </p>
-                    </div>
-                    <div>
-                        <p>Nombre del edificio
-                            <strong>lev.NombreEdificio</strong>
-                        </p>
-                    </div>
-                    <div>
-                        <p>Institucion
-                            <strong>lev.Institucion</strong>
-                        </p>
+                    <div class="item item-divider item-stable">
+                        <button class="button button-block button-positive icon-left ion-ios7-plus">
+                          Agregar
+                        </button>
                     </div>
                 </div>
-            </div>
-            <ion-list class="item-text-wrap">
-                <label class="item item-input item-stacked-label">
-                    <span class="label ">Cantidad de personal que labora en el Inmueble (aproximado)</span>
-                    <input type="text" placeholder="Cantidad de personal que labora en el Inmueble (aproximado)" ng-model="data.CantidadPersonasLaboran" name="CantidadPersonasLaboran">
-                </label>
-                <label class="item item-input item-stacked-label">
-                    <span class="label">Fuente de Información</span>
-                    <input type="text" placeholder="Fuente de Información" ng-model="data.FuenteInformacion" name="FuenteInformacion">
-                </label>
-                <ion-item class="item-divider">Accesibilidad</ion-item>
-                <ion-toggle toggle-class="toggle-positive" ng-model="data.AcceTieneRampa"name="AcceTieneRampa">Rampas</ion-toggle>
-                <ion-toggle toggle-class="toggle-positive" ng-model="data.AcceTieneElevador" name="AcceTieneElevador">Elevador</ion-toggle>
-                <ion-toggle toggle-class="toggle-positive" ng-model="data.AcceTieneSenalizacion" name="AcceTieneSenalizacion">Señalización</ion-toggle>
-                <ion-toggle toggle-class="toggle-positive" ng-model="data.AcceTieneSanitario" name="AcceTieneSanitario">Sanitarios</ion-toggle>
+
+
+                <!-- btn : guardar -->
                 <ion-item class="item-divider">
-                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('2_1')">Validar</button>
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('1_2')">Validar</button>
                 </ion-item>
+                <!--/btn : guardar -->
             </ion-list>
         </form>
     </ion-content>

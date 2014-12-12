@@ -118,10 +118,17 @@
     $scope.menuRight = [
       {
           page: '1',
-          title: '1 Infraestructura',
+          title: '1 Descripción del Inmueble',
           ready: false,
           msg: 'Pendiente',
+          divider: true
       },
+      {
+          page: '1',
+          title: '1.1 Descripción general del Inmueble',
+          ready: false,
+          msg: 'Pendiente'
+      }
     ];
 
     $scope.$emit('setMenu', $scope.menuRight);
