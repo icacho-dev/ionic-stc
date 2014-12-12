@@ -8,26 +8,22 @@
                     <span class="label ">Descripcion general</span>
                     <textarea rows="10" placeholder="Descripcion general" ng-model="data.DescripcionGeneral" name="DescripcionGeneral" ></textarea>
                 </label>
-
+                <!-- card -->
                 <div class="card">                    
-                    <ion-item class="item-divider item-calm">Dimensiones y configuración de sus construcciones</ion-item> 
+                    <ion-item class="item-divider item-calm">Diagrama de los inmuebles, sus flujos y funcionamiento actual (Por planta, indicando accesos, número de cuerpos, y flujos).</ion-item> 
                     <div class="item item-text-wrap item-stable">
                         <div class="card"> 
-                            <ion-item class="item-divider item-dark">Cuerpo</ion-item> 
+                            <ion-item class="item-divider item-dark">Diagrama</ion-item> 
                             <label class="item item-input item-select">
-                                <div class="input-label">
-                                   Institución
+                                <div class="input-label" >
+                                   Subir diagrama 
                                 </div>
-                                <select ng-model="data.FK_IdInmuebleInstitucion" ng-options="c.value for c in data.FK_IdInmuebleInstitucionSelect"></select>
+                                 <input type="file" ng-model="data.FL_Diagrama" name="FL_Diagrama" />
                             </label> 
                             <label class="item item-input item-stacked-label">
-                                <span class="label ">No. de Niveles</span>
-                                <input type="number" placeholder="No. de Niveles" ng-model="data.NumeroNiveles" name="NumeroNiveles">
+                                <span class="label ">Descripción</span>
+                                <textarea placeholder="Descripción" ng-model="data.Descripcion" rows="10" name="Descripcion" ></textarea>
                             </label>
-                            <ion-item class="item item-input item-stacked-label">
-                                <span class="label ">Area (m2)</span>
-                                <input type="number" placeholder="Area (m2)" ng-model="data.Area" name="Area">
-                            </ion-item>
                             <ion-item class="item-divider item-light">
                             <button class="button button-small button-outline button-positive icon-right ion-eye">Ver detalle</button>
                             <button class="button button-small button-outline button-assertive icon-right ion-close">Borrar</button></ion-item> 
@@ -39,8 +35,7 @@
                         </button>
                     </div>
                 </div>
-
-
+                <!--./card -->
                 <!-- btn : guardar -->
                 <ion-item class="item-divider">
                     <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('1_2')">Validar</button>

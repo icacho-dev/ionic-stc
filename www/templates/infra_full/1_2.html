@@ -1,0 +1,50 @@
+<ion-view ng-controller="LevCtrl" title="1 Descripción del Inmueble" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 1.2 : DISTRIBUCIÓN ARQUITECTÓNICA, POR CUERPOS Y NIVELES -->
+                <ion-item class="item-divider item-calm">1.2 Distribución arquitectónica, por cuerpos y niveles</ion-item>
+                
+                <!-- card -->
+                <div class="card">                    
+                    <div class="item item-text-wrap item-stable">
+                        <div class="card"> 
+                            
+                            <label class="item item-input item-stacked-label">
+                                <span class="label ">Cuerpo</span>
+                                <input type="text" placeholder="Cuerpo" ng-model="data.Cuerpo" name="Cuerpo">
+                            </label>
+
+                            <label class="item item-input item-stacked-label">
+                                <span class="label ">Nivel</span>
+                                <input type="tel" placeholder="Nivel" ng-model="data.NivelInstitucion" name="NivelInstitucion">
+                            </label>
+
+                            <label class="item item-input item-stacked-label">
+                                <span class="label ">Uso del espacio</span>
+                                <textarea placeholder="UsoEspacio" ng-model="data.UsoEspacio" rows="10" name="UsoEspacio" ></textarea>
+                            </label>
+                            
+
+                            <!-- card-controles -->
+                            <ion-item class="item-divider item-light">
+                            <button class="button button-small button-outline button-positive icon-right ion-eye">Ver detalle</button>
+                            <button class="button button-small button-outline button-assertive icon-right ion-close">Borrar</button></ion-item> 
+                        </div>  
+                    </div>
+                    <div class="item item-divider item-stable">
+                        <button class="button button-block button-positive icon-left ion-ios7-plus">
+                          Agregar
+                        </button>
+                    </div>
+                </div>
+                <!--./card -->
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('2_1')">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,4 +1,5 @@
 ﻿angular.module('app.controllers.lev', ['ionic'])
+//-------------------------------------
 .controller('LevInfraSimpleCtrl', function ($scope, $location) {
 	console.info('LevInfraSimpleCtrl');
 	// ------------------
@@ -83,7 +84,6 @@
 	];
 	
 	$scope.$emit('setMenu', $scope.menuRight);
-
 })
 //-------------------------------------
 .controller('LevInfraInmueble', function ($scope, $location) {
@@ -126,6 +126,12 @@
       {
           page: '1',
           title: '1.1 Descripción general del Inmueble',
+          ready: false,
+          msg: 'Pendiente'
+      },
+      {
+          page: '1_2',
+          title: '1.2 Distribución arquitectónica, por cuerpos y niveles',
           ready: false,
           msg: 'Pendiente'
       }
