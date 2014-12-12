@@ -62,7 +62,7 @@ angular.module('starter', [
         views: {
             'appContent': {
                 templateUrl: function($stateParams) {
-                    return "templates/infra/" + $stateParams.page + ".html";
+                    return "templates/infra_full/" + $stateParams.page + ".html";
                 }
             }
         }

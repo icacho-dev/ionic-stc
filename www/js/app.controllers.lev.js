@@ -110,7 +110,7 @@
     $scope.$emit('setMenu', $scope.menuRight);
 })
 //-------------------------------------
-.controller('LevInfraFull', function ($scope, InmuebleFactory) {
+.controller('LevInfraFull', function ($scope, $location) {
     console.info('LevInfraFull');
     // ------------------
     // --- inicializa el menu !! 

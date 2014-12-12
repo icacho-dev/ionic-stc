@@ -1,24 +1,52 @@
-﻿<ion-view ng-controller="LevInfraFull" title="Imagenes">
-    <ion-content class="has-header">
-        <div class="card text-center">
-            <div class="item item-text-wrap item-icon-right item-icon-right">
-                HDDDDDDDDDD
-                <button class="button button-icon icon ion-ios7-plus-outline"></button>
+﻿<ion-view ng-controller="LevCtrl" title="1 Descripción del Inmueble" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">
+        <form novalidate name="form">
+            <div class="list card">
+                <div class="item item-dark item-icon-right">
+                <i class="icon ion-clipboard"></i>
+                Datos Generales</div>
+                <div class="item item-body item-stable">
+                <!-- pendientes:kcho -->
+                    <div>
+                        <p>Entidad
+                            <strong>lev.Entidad</strong>
+                        </p>
+                    </div>
+                    <div>
+                        <p>Municipio
+                            <strong>lev.Municipio</strong>
+                        </p>
+                    </div>
+                    <div>
+                        <p>Nombre del edificio
+                            <strong>lev.NombreEdificio</strong>
+                        </p>
+                    </div>
+                    <div>
+                        <p>Institucion
+                            <strong>lev.Institucion</strong>
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="list card" ng-repeat="item in data.items">
-            <div class="item item-divider item-icon-right item-icon-left text-center">
-                <i class="icon ion-ios7-eye-outline "></i>
-                <i class="icon ion-ios7-close-empty assertive"></i>
-                Fotografía: {{$index + 1}}
-            </div>
-            <div class="item item-image">
-                <img ng-src="{{item}}" class="padding">
-            </div>
-            <label class="item item-input item-floating-label">
-                <span class="input-label">Descripcion</span>
-                <input type="text" placeholder="Descripcion">
-            </label>
-        </div>
+            <ion-list class="item-text-wrap">
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Cantidad de personal que labora en el Inmueble (aproximado)</span>
+                    <input type="text" placeholder="Cantidad de personal que labora en el Inmueble (aproximado)" ng-model="data.CantidadPersonasLaboran" name="CantidadPersonasLaboran">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label">Fuente de Información</span>
+                    <input type="text" placeholder="Fuente de Información" ng-model="data.FuenteInformacion" name="FuenteInformacion">
+                </label>
+                <ion-item class="item-divider">Accesibilidad</ion-item>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.AcceTieneRampa"name="AcceTieneRampa">Rampas</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.AcceTieneElevador" name="AcceTieneElevador">Elevador</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.AcceTieneSenalizacion" name="AcceTieneSenalizacion">Señalización</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.AcceTieneSanitario" name="AcceTieneSanitario">Sanitarios</ion-toggle>
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('2_1')">Validar</button>
+                </ion-item>
+            </ion-list>
+        </form>
     </ion-content>
 </ion-view>
