@@ -1,0 +1,150 @@
+<ion-view ng-controller="LevCtrl" title="{{menuRight[9].title}}" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 4.1 : POTENCIALIDAD DE INFRAESTRUCTURA PARA LA IMPLEMENTACIÓN DEL NSJP -->
+                <ion-item class="item-divider item-calm">{{menuRight[10].title}}</ion-item>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioUnidadAtencionTemprana" name="EspacioUnidadAtencionTemprana">Unidad de Atención Temprana</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioUnidadAtencionVictimas" name="EspacioUnidadAtencionVictimas">Unidad de Atención  a Víctimas</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioAreaTestigoProtegido" name="EspacioAreaTestigoProtegido">Área de testigo protegido</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioAreaPoliciaProcesal" name="EspacioAreaPoliciaProcesal">Área de policía procesal</ion-toggle>
+
+                <!-- card -->
+                <div class="card">        
+                    <!-- notas -->
+                    <div class="item item-positive item-icon-right item-text-wrap">
+                        <i class="icon ion-ios7-information-outline"></i>
+                         Se requiere información del personal
+                    </div>
+                    <!--/notas -->   
+                    <div class="item item-text-wrap item-stable">
+                        <div class="card"> 
+                            
+                            <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioUnidadJusticiaAlternativa" name="EspacioUnidadJusticiaAlternativa">Unidad de Justicia Alternativa</ion-toggle>
+                            <label class="item item-input item-stacked-label">
+                                <span class="label ">Número de casos que atiende por día la Unidad de Justicia Alternativa</span>
+                                <input type="tel" placeholder="Número de casos que atiende por día la Unidad de Justicia Alternativa" ng-model="data.NumeroCasosJusticiaAlternativa" name="NumeroCasosJusticiaAlternativa">
+                            </label>
+                            <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioServiciosPericiales" name="EspacioServiciosPericiales">Servicios periciales</ion-toggle>
+
+                            <label class="item item-input item-stacked-label">
+                                <span class="label ">Describa brevemente los espacios destinados para este servicio</span>
+                                <textarea placeholder="Describa brevemente los espacios destinados para este servicio (Ejemplo: Tipo de laboratorios, dimensiones, descripción de instalaciones)" ng-model="data.DescripcionServiciosPericiales" rows="10" name="DescripcionServiciosPericiales" ></textarea>
+                            </label>
+
+                        </div>  
+                    </div>                    
+                </div>
+                <!--./card -->
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioAdminCausa" name="EspacioAdminCausa">Administrador de causa</ion-toggle>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioAdminSalas" name="EspacioAdminSalas">Administrador de salas</ion-toggle>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioAdminGestion" name="EspacioAdminGestion">Administrador de gestión</ion-toggle>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioAdminTribunal" name="EspacioAdminTribunal">Administrador de tribunal</ion-toggle>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioAreaTestigoDefensa" name="EspacioAreaTestigoDefensa">Área de testigo de la defensa</ion-toggle>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioAreaTestigoMinisterioPub" name="EspacioAreaTestigoMinisterioPub">Área de testigo del Ministerio Público</ion-toggle>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioSite" name="EspacioSite">Site</ion-toggle>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioBodegaAlmacen" name="EspacioBodegaAlmacen">Bodega o Almacén de Evidencias</ion-toggle>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Área aproximada</span>
+                    <input type="tel" placeholder="Área aproximada" ng-model="data.BodegaAlmacenArea" name="BodegaAlmacenArea">  
+                </label> 
+
+                <!-- card 2 -->
+                <div class="card">        
+                    <!-- notas -->
+                    <div class="item item-positive item-icon-right item-text-wrap">
+                        <i class="icon ion-ios7-information-outline"></i>
+                         Se requiere información del personal de la Institución Operativa
+                    </div>
+                    <!--/notas -->   
+                    <div class="item item-text-wrap item-stable">
+                        <!-- repeat -->
+                        <div class="card" ng-repeat="item in [1,2]"> 
+                            
+                            <a class="item item-stable item-icon-right" href="#">                                
+                                <strong>Sala de Juicio Oral</strong> : {{item}}
+                                <i class="icon ion-ios7-close-outline"></i>
+                            </a>
+                            
+                            <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioJuicioOralPenal" name="EspacioJuicioOralPenal">Salas de Juicio Oral Penal (Control, Intermedia, Ejecución de sentencia)</ion-toggle>
+                            <label class="item item-input item-stacked-label">
+                                <span class="label ">Número de sesiones promedio por día, por sala de Juicio Oral</span>
+                                <input type="tel" placeholder="Número de sesiones promedio por día, por sala de Juicio Oral" ng-model="data.SesionesXDiaJuicioOralPenal" name="SesionesXDiaJuicioOralPenal">
+                            </label>
+                            <label class="item item-input item-stacked-label">
+                                <span class="label ">Superficie</span>
+                                <input type="tel" placeholder="Superficie" ng-model="data.SuperficieJuicioOralPenal" name="SuperficieJuicioOralPenal">
+                            </label>
+
+                            <label class="item item-input item-select item-stacked-label">
+                                <div class="input-label">
+                                  Tipo de Salas de Juicio Oral Penal
+                                </div>
+                                <select ng-model="data.FK_IdTipoJuicioOralPenal" ng-options="c.value for c in data.FK_IdTipoJuicioOralPenalSelect" name="FK_IdTipoJuicioOralPenal"></select>
+                            </label>
+
+                            <label class="item item-input item-stacked-label">
+                                <span class="label ">Superficie</span>
+                                <input type="tel" placeholder="Superficie" ng-model="data.NumeroSalas" name="NumeroSalas">
+                            </label>
+                        </div> 
+                        <!--./repeat -->
+                    </div>
+                    <div class="item item-divider item-stable">
+                        <button class="button button-block button-positive icon-left ion-ios7-plus">
+                          Agregar
+                        </button>
+                    </div>                    
+                </div>
+                <!--./card 2 -->
+
+                <!-- card 3 -->
+                <div class="card">        
+                    <!-- notas -->
+                    <div class="item item-positive item-icon-right item-text-wrap">
+                        <i class="icon ion-ios7-information-outline"></i>
+                         Se requiere información del personal de la Institución Operativa
+                    </div>
+                    <!--/notas -->   
+                    <div class="item item-text-wrap item-stable">
+                        <div class="card"> 
+                            
+                            <ion-toggle toggle-class="toggle-positive" ng-model="data.SeparosInputadosHombres" name="SeparosInputadosHombres">Separos para imputados hombres</ion-toggle>
+                            <label class="item item-input item-stacked-label">
+                                <span class="label ">Número de separos</span>
+                                <input type="tel" placeholder="Número de separos" ng-model="data.NumeroSeparosHombres" name="NumeroSeparosHombres">
+                            </label>
+
+
+
+                        </div>  
+                        <div class="card">
+                            <ion-toggle toggle-class="toggle-positive" ng-model="data.SeparosImputadosMujeres" name="SeparosImputadosMujeres">Separos para imputados mujeres</ion-toggle>
+                            <label class="item item-input item-stacked-label">
+                                <span class="label ">Número de separos</span>
+                                <input type="tel" placeholder="Número de separos" ng-model="data.NumeroSeparosMujeres" name="NumeroSeparosMujeres">
+                            </label>
+                        </div>
+                    </div>                    
+                </div>
+                <!--./card 3 -->
+
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('1_2')">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

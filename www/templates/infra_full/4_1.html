@@ -1,0 +1,36 @@
+<ion-view ng-controller="LevCtrl" title="{{menuRight[7].title}}" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 4.1 : POTENCIALIDAD DE INFRAESTRUCTURA PARA LA IMPLEMENTACIÓN DEL NSJP -->
+                <ion-item class="item-divider item-calm">{{menuRight[8].title}}</ion-item>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.SusceptibleAmpliacionEspacio" name="SusceptibleAmpliacionEspacio">¿El inmueble es susceptible de adecuar y/o ampliar, en cuanto a espacio?</ion-toggle>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Superficie aproximada (m2)</span>
+                    <input type="tel" placeholder="Superficie aproximada (m2)" ng-model="data.SuperficieAmpliacionEspacio" name="SuperficieAmpliacionEspacio">  
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Describa</span>
+                    <textarea placeholder="Describa" ng-model="data.DescripcionAmpliacionEspacio" name="DescripcionAmpliacionEspacio" ></textarea>
+                </label>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.SusceptibleAmpliacionEstructura" name="SusceptibleAmpliacionEstructura">¿El inmueble es susceptible de adecuar y/o ampliar, en cuanto a estructura?</ion-toggle>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Superficie aproximada (m2)</span>
+                    <input type="tel" placeholder="Superficie aproximada (m2)" ng-model="data.SuperficieAmplacionEstructura" name="SuperficieAmplacionEstructura">  
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Describa</span>
+                    <textarea placeholder="Describa" ng-model="data.DescripcionAmpliacionEstructura" name="DescripcionAmpliacionEstructura" ></textarea>
+                </label>
+
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('a_1')">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

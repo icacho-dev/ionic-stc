@@ -68,11 +68,22 @@
                 break;
             case 'infra_imueble': break;
             case 'infra_full': 
-                dataJson.FK_IdEstadoFisico = [
+                dataJson.FK_IdEstadoFisicoSelect = [
                     {key:1 , value:'Adecuado'} ,
                     {key:2 , value:'Regular'} ,
                     {key:3 , value:'Deficiente'} ,
                     {key:4 , value:'Malo'}
+                ],
+                dataJson.FK_IdTipoImplementacionSelect = [
+                    {key:1 , value:'Ampliación'} ,
+                    {key:2 , value:'Superficie'} ,
+                    {key:3 , value:'Remodelación'} ,
+                    {key:4 , value:'Malo'}
+                ],
+                dataJson.FK_IdTipoJuicioOralPenalSelect = [
+                    {key:1 , value:'Adolescente'} ,
+                    {key:2 , value:'Mujeres'} ,
+                    {key:3 , value:'Otros'} 
                 ]
                 ;
 

@@ -160,6 +160,32 @@
           title: '3.1 Referente a la implementación del NSJP',
           ready: false,
           msg: 'Pendiente'
+      },
+      {
+          page: '4_1',
+          title: '4 Potencialidad de infraestructura',
+          ready: false,
+          msg: 'Pendiente',
+          divider: true
+      },
+      {
+          page: '4_1',
+          title: '4.1 Potencialidad de infraestructura para la implementación del NSJP',
+          ready: false,
+          msg: 'Pendiente'
+      },
+      {
+          page: 'a_1',
+          title: 'Anexo 1',
+          ready: false,
+          msg: 'Pendiente',
+          divider: true
+      },
+      {
+          page: 'a_1',
+          title: 'A.1 ¿El inmueble cuenta con los siguientes espacios físicos?',
+          ready: false,
+          msg: 'Pendiente'
       }
     ];
 
