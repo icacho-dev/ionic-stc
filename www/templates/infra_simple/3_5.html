@@ -1,0 +1,82 @@
+<ion-view ng-controller="LevCtrl" title="3 Características del Inmueble" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraSimpleCtrl">
+        
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 3.5 : CONJUNTO -->  
+                <ion-item class="item-divider item-calm">3.5 Conjunto</ion-item>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.ConjuntoTieneBardaPerimetral" name="ConjuntoTieneBardaPerimetral">Cuenta con barda perimetral</ion-toggle>                
+                <ion-item class="item-divider">Tipo</ion-item>
+                <label class="item item-input item-select item-stacked-label">
+                    <div class="input-label">
+                      Tipo de barda perimetral
+                    </div>
+                    <select ng-model="data.FK_IdTipoBarda" ng-options="c.value for c in data.FK_IdTipoBardaSelect" name="FK_IdTipoBarda"></select>
+                </label>
+                
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.ConjuntoTieneAlumbradoExterior" name="ConjuntoTieneAlumbradoExterior">Alumbrado exterior</ion-toggle>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.ConjuntoTieneAreasVerdes" name="ConjuntoTieneAreasVerdes">Áreas verdes</ion-toggle>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Áreas verdes (m2)</span>
+                    <input type="tel" placeholder="Áreas verdes (m2)" ng-model="data.ConjuntoAreasVerdesM2" name="ConjuntoAreasVerdesM2">  
+                </label>
+
+                <!-- notas -->
+                <div class="list card">
+                    <div class="item item-positive item-icon-right item-text-wrap">
+                        <i class="icon ion-ios7-information-outline"></i>
+                      Se requiere información del personal del área de Recursos Materiales
+                    </div>                    
+                </div>
+                <!--/notas -->
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.TieneLocalesComerciales" name="TieneLocalesComerciales">Existen locales comerciales o espacios concesionados dentro del inmueble</ion-toggle>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Cuantos</span>
+                    <input type="tel" placeholder="Cuantos" ng-model="data.LocalComercialCantidad" name="LocalComercialCantidad">  
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Superficie (m2)</span>
+                    <input type="tel" placeholder="Superficie (m2)" ng-model="data.LocalComercialSuperficie" name="LocalComercialSuperficie">  
+                </label>
+                <label class="item item-input item-select item-stacked-label">
+                    <div class="input-label">
+                      De que tipo
+                    </div>
+                    <select ng-model="data.FK_IdTipoLocalComercial" ng-options="c.value for c in data.FK_IdTipoLocalComercialSelect" name="FK_IdTipoLocalComercial"></select>
+                </label>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.TieneServicioComedor" name="TieneServicioComedor">¿Cuenta con servicio de comedor?</ion-toggle>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Capacidad</span>
+                    <input type="tel" placeholder="Capacidad" ng-model="data.Capacidad" name="Capacidad">  
+                </label>
+                <label class="item item-input item-select item-stacked-label">
+                    <div class="input-label">
+                      Tipo comedor
+                    </div>
+                    <select ng-model="data.FK_IdTipoServicioComedor" ng-options="c.value for c in data.FK_IdTipoServicioComedorSelect" name="FK_IdTipoServicioComedor"></select>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Otro</span>
+                    <input type="text" placeholder="En caso de que el tipo de comedor sea 'Otro'" ng-model="data.Otro" name="Otro">  
+                </label>  
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.CuentaPresServ" name="CuentaPresServ">¿Cuenta con prestación de servicios contratados?</ion-toggle>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.PresServLimpieza" name="PresServLimpieza">Limpieza</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.PresServFumigacion" name="PresServFumigacion">Fumigacion</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.PresServJardineria" name="PresServJardineria">Jardineria</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.PresServMantenimiento" name="PresServMantenimiento">Mantenimiento</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.PresServFotocopiado" name="PresServFotocopiado">Fotocopiado</ion-toggle>
+
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('3_5')">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

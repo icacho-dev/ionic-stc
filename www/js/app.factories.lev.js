@@ -45,7 +45,25 @@
                     {key:1 , value:'Arquitectonicos'} ,
                     {key:2 , value:'Ins. Eletromecanicas'} ,
                     {key:3 , value:'Planos Parciales'}
-                ];
+                ],
+                dataJson.FK_IdTipoBardaSelect = [
+                    {key:1 , value:'Muro cerrado'} ,
+                    {key:2 , value:'Rejacero'} ,
+                    {key:3 , value:'Reja tubular'},
+                    {key:4 , value:'Otro'}
+                ],
+                dataJson.FK_IdTipoLocalComercialSelect = [
+                    {key:1 , value:'tipo 1'} ,
+                    {key:2 , value:'tipo 2'} ,
+                    {key:3 , value:'tipo 3'} ,
+                    {key:4 , value:'tipo 4'}
+                ],
+                dataJson.FK_IdTipoServicioComedorSelect = [
+                    {key:1 , value:'Propio'} ,
+                    {key:2 , value:'Concecionado'} ,
+                    {key:3 , value:'Otro'}
+                ]
+                ;
 
                 break;
             case 'infra_imueble': break;

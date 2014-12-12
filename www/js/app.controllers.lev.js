@@ -54,11 +54,16 @@
       title: '3.3 Planos del Inmueble',
       ready: false,
       msg: 'Pendiente',
-    }
-    ,
+    },
     {
       page: '3_4',
       title: '3.4 Obra exterior',
+      ready: false,
+      msg: 'Pendiente',
+    },
+    {
+      page: '3_5',
+      title: '3.5 Conjunto',
       ready: false,
       msg: 'Pendiente',
     }
