@@ -26,7 +26,42 @@
                     </div>
                     <select ng-model="data.FK_IdTipoEstacionamiento" ng-options="c.value for c in data.FK_IdTipoEstacionamientoSelect" name="FK_IdTipoEstacionamiento"></select>
                 </label>
-                
+
+                <ion-item class="item-divider">Capacidad de cajones</ion-item>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Empleados</span>
+                    <input type="tel" placeholder="Empleados'" ng-model="data.CapacidadCajonesEmpleados" name="CapacidadCajonesEmpleados">  
+                </label> 
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Visitas</span>
+                    <input type="tel" placeholder="Visitas'" ng-model="data.CapacidadCajonesVisitas" name="CapacidadCajonesVisitas">  
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Discapacitados</span>
+                    <input type="tel" placeholder="Discapacitados'" ng-model="data.CapacidadCajonesDiscapacitados" name="CapacidadCajonesDiscapacitados">  
+                </label> 
+
+                <ion-item class="item-divider">Accesos</ion-item>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">No. de Accesos</span>
+                    <input type="tel" placeholder="No. de Accesos'" ng-model="data.EstacionamientoNumeroAccesos" name="EstacionamientoNumeroAccesos">  
+                </label>
+
+                <ion-item class="item-divider">En caso de Estacionamiento rentado</ion-item>           
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Vigencia del contrato</span>
+                    <input type="date"  ng-model="data.InmuebleVigenciaContrato" name="InmuebleVigenciaContrato">  
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Precio de la renta</span>
+                    <input type="tel" placeholder="Precio de la renta" ng-model="data.InmueblePrecioRenta" name="InmueblePrecioRenta">  
+                </label>
+
+                <ion-item class="item-divider">Comentarios</ion-item>           
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Comentarios de obra exterior</span>
+                    <textarea placeholder="Comentarios de obra exterior" ng-model="data.ComentarioObraExterior" name="ComentarioObraExterior" ></textarea>
+                </label>
                 <!-- btn : guardar -->
                 <ion-item class="item-divider">
                     <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('3_5')">Validar</button>
