@@ -1,0 +1,96 @@
+<ion-side-menus ng-controller="AppCtrl">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+            <ion-nav-buttons side="left" ng-if="user.login">
+                <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right" ng-if="select_lev != null">
+                <button menu-toggle="right" class="button button-icon icon ion-navicon"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="appContent" animation="slide-left-right"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left" ng-if="user.login">
+        <header class="bar bar-header setec-bGreenLight">
+            <span class="title" style="font-size:small;">Inmuebles</span>
+        </header>
+        <ion-content class="has-header">
+            <ion-list ng-repeat="i in list_inmueble  track by $index">
+                <!--inmueble-->
+                <ion-item nav-clear class="item-text-wrap item-icon-right dark">
+                    <i class="icon ion-ios7-location-outline"></i>
+                    <span style="display:block;">{{i.nombre}} </span>
+                    <span style="display:block;" class="setec-sm-title-sub ">{{i.tipo_inmueble}}</span>
+                    <span class="setec-sm-title-sub setec-cGreenLow">{{i.ubicacion.Domicilio}} , {{i.ubicacion.Municipio}} , {{i.ubicacion.Estado}}</span>
+                </ion-item>
+                <!-- -->
+                <div class="item item-divider item-icon-left" ng-if="i.list_levantamiento_inm.length > 0">
+                    <i class="icon ion-home"></i>
+                    Inmueble
+                </div>
+                <ion-item nav-clear menu-close ng-click="selectLev(i,l)" class="bar-dark" ng-repeat="l in i.list_levantamiento_inm  track by $index">
+                    {{l.title}}
+                </ion-item>
+                <!-- -->
+                <div class="item item-divider item-icon-left" ng-if="i.list_levantamiento_tics_admin.length > 0">
+                    <i class="icon ion-laptop"></i>
+                    TIC'S ADMIN.
+                </div>
+                <ion-item nav-clear menu-close ng-click="selectLev(i,l)" ng-repeat="l in i.list_levantamiento_tics_admin  track by $index">
+                    {{l.title}}
+                </ion-item>
+                <!-- -->
+                <div class="item item-divider item-icon-left" ng-if="i.list_levantamiento_tics.length > 0">
+                    <i class="icon ion-laptop"></i>
+                    TIC'S
+                </div>
+                <ion-item nav-clear menu-close ng-click="selectLev(i,l)" ng-repeat="l in i.list_levantamiento_tics  track by $index">
+                    <span style="display:block;">{{l.title}} </span>
+                    <span style="display:block;" class="setec-sm-title-sub ">{{l.institucion}}</span>
+                </ion-item>
+                <!-- -->
+                <div class="item item-divider item-icon-left" ng-if="i.list_levantamiento_sp.length > 0">
+                    <i class="icon ion-beaker"></i>
+                    Servicios Periciales
+                </div>
+                <ion-item nav-clear menu-close ng-click="selectLev(i,l)" ng-repeat="l in i.list_levantamiento_sp  track by $index">
+                    <span style="display:block;">{{l.title}} </span>
+                    <span style="display:block;" class="setec-sm-title-sub ">{{l.institucion}}</span>
+                </ion-item>
+            </ion-list>
+
+            <ion-list class="configuracion">
+                <ion-item nav-clear class="item-text-wrap item-icon-right item-positive">
+                    <i class="icon ion-ios7-gear-outline"></i>
+                    Configuración
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/login" class="item-icon-left">
+                    <i class="icon ion-log-in"></i>
+                    Login
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/dashboard" class="item-icon-left" ng-show="user.login">
+                    <i class="icon ion-ios7-loop-strong"></i>
+                    Dashboard
+                </ion-item>
+            </ion-list>
+
+        </ion-content>
+    </ion-side-menu>
+
+    <ion-side-menu side="right" style="background:#3F4041;" ng-if="select_lev != null">
+        <ion-content>
+            <ion-list>
+                <!-- editar !!!! -->
+                <ion-item nav-clear menu-close ng-click="goPage(m.page)" ng-repeat="m in menuRight  track by $index" ng-class="{'item-dark dark' : m.divider, 'item-dark' : !m.divider}" class="item-icon-right item-text-wrap">
+                <i class="icon" ng-if="!m.divider" ng-class="{'ion-ios7-checkmark balanced' : m.ready, 'ion-ios7-checkmark-outline energized' : !m.ready}"></i>
+                    <label class="label">{{m.title}}</label>
+                    <div ng-if="!m.divider" class="setec-cGrayLight setec-sm-title-sub">{{m.msg}}</div>
+                </ion-item>
+                <ion-item nav-clear class="item-text-wrap  setec-sm-title-sub dark item-divider">
+                    {{dataJson}} <!-- quitar !!! -->
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

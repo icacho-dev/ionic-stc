@@ -1,0 +1,38 @@
+<ion-view ng-controller="LevCtrl" title="3 Características del Inmueble" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraSimpleCtrl">
+        <!-- notas -->
+        <div class="list card">
+            <div class="item item-positive item-icon-right item-text-wrap">
+            <i class="icon ion-ios7-information-outline"></i>
+             Se requiere información del personal del área de Recursos Materiales</div>
+            
+        </div>
+        <!--/notas -->
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 3.4 : OBRA EXTERIOR -->  
+                <ion-item class="item-divider item-calm">3.4 Obra exterior</ion-item>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.TieneEstacionamiento" name="TieneEstacionamiento">Estacionamiento</ion-toggle>                
+                <ion-item class="item-divider">Tipo</ion-item>
+                <label class="item item-input item-select item-stacked-label">
+                    <div class="input-label">
+                      Propiedad
+                    </div>
+                    <select ng-model="data.FK_IdTipoPropiedadEstacionamiento" ng-options="c.value for c in data.FK_IdTipoPropiedadEstacionamientoSelect" name="FK_IdTipoPropiedadEstacionamiento"></select>
+                </label>
+                <label class="item item-input item-select item-stacked-label">
+                    <div class="input-label">
+                      Estacionamiento
+                    </div>
+                    <select ng-model="data.FK_IdTipoEstacionamiento" ng-options="c.value for c in data.FK_IdTipoEstacionamientoSelect" name="FK_IdTipoEstacionamiento"></select>
+                </label>
+                
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('3_5')">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

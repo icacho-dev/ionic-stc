@@ -1,0 +1,44 @@
+<ion-view ng-controller="LevCtrl" title="3 Características del Inmueble" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraSimpleCtrl">
+        <!-- notas -->
+        <div class="list card">
+            <div class="item item-positive item-icon-right item-text-wrap">
+            <i class="icon ion-ios7-information-outline"></i>
+             Se requiere información del personal del área de Recursos Materiales</div>
+            
+        </div>
+        <!--/notas -->
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 3.2 : ACREDITACION DE LA PROPIEDAD -->  
+                 <ion-item class="item-divider item-calm">3.2 Acreditación de la propiedad</ion-item>              
+                <label class="item item-input item-select item-stacked-label">
+                    <div class="input-label">
+                      Situacion del Imueble
+                    </div>
+                    <select ng-model="data.FK_IdSituacionInmueble" ng-options="c.value for c in data.FK_IdSituacionInmuebleSelect"></select>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Cual</span>
+                    <input type="text" placeholder="Si la Situación es 'Otro'" ng-model="data.SituacionInmuebleOtro" name="SituacionInmuebleOtro">  
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Acreditación de la propiedad y ocupación del inmueble</span>
+                    <input type="text" placeholder="Acreditación de la propiedad y ocupación del inmueble" ng-model="data.AcreditacionPropiedad" name="AcreditacionPropiedad">  
+                </label>
+                <ion-item class="item-divider">En caso de Inmueble rentado</ion-item>               
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Vigencia del contrato</span>
+                    <input type="date" placeholder="Vigencia del contrato" ng-model="data.InmuebleVigenciaContrato" name="InmuebleVigenciaContrato">  
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Precio de la renta</span>
+                    <input type="text" placeholder="Precio de la renta" ng-model="data.InmueblePrecioRenta" name="InmueblePrecioRenta">  
+                </label>
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('3_3')">Validar</button>
+                </ion-item>
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

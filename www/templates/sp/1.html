@@ -1,0 +1,24 @@
+﻿<ion-view ng-controller="ImagesCtrl" title="Imagenes">
+    <ion-content class="has-header">
+        <div class="card text-center">
+            <div class="item item-text-wrap item-icon-right item-icon-right">
+                Agregar Fotografía
+                <button class="button button-icon icon ion-ios7-plus-outline"></button>
+            </div>
+        </div>
+        <div class="list card" ng-repeat="item in data.items">
+            <div class="item item-divider item-icon-right item-icon-left text-center">
+                <i class="icon ion-ios7-eye-outline "></i>
+                <i class="icon ion-ios7-close-empty assertive"></i>
+                Fotografía: {{$index + 1}}
+            </div>
+            <div class="item item-image">
+                <img ng-src="{{item}}" class="padding">
+            </div>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Descripcion</span>
+                <input type="text" placeholder="Descripcion">
+            </label>
+        </div>
+    </ion-content>
+</ion-view>

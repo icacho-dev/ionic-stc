@@ -1,0 +1,60 @@
+<ion-view ng-controller="LevCtrl" title="3 Características del Inmueble" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraSimpleCtrl">
+        <!-- notas -->
+        <div class="list card">
+            <div class="item item-positive item-icon-right item-text-wrap">
+            <i class="icon ion-ios7-information-outline"></i>
+             Se requiere información del personal del área de Recursos Materiales</div>
+            
+        </div>
+        <!--/notas -->
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 3.3 : PLANOS DEL INMUEBLE -->  
+                <ion-item class="item-divider item-calm">3.3 Planos del Inmueble</ion-item>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.Digitales" name="Digitales">Digitales</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.Fisicos" name="Fisicos">Fisicos</ion-toggle>
+                <!--<ion-toggle toggle-class="toggle-positive" ng-model="data.PlanosActualizados" name="PlanosActualizados">Planos actualizados</ion-toggle> -->
+
+                <label class="item item-input item-select item-stacked-label">
+                    <div class="input-label">
+                      Tipo de planos
+                    </div>
+                    <select ng-model="data.FK_IdSituacionInmueble" ng-options="c.value for c in data.FK_IdSituacionInmuebleSelect"></select>
+                </label>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.CopiaDigital" name="CopiaDigital">Copia digital</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.CopiaFisica" name="CopiaFisica">Copia fisica</ion-toggle> 
+
+                <ion-item class="item-divider item-calm">3.3 Planos del Inmueble</ion-item>           
+                <ion-item class="item-divider">Tipo de planos</ion-item>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.Arquitectonicos" name="Arquitectonicos">Arquitectonicos</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.InstElectromecanicas" name="InstElectromecanicas">Inst. Electromecanicas</ion-toggle>
+
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.PlanosParciales" name="PlanosParciales">Planos Parciales</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.EntreganCopia" name="EntreganCopia">Nos entregan una copia</ion-toggle>
+                
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.Estructurales" name="Estructurales">Estructurales</ion-toggle>
+                
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.InstEsp" name="InstEsp">Inst. especiales</ion-toggle>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Otros</span>
+                    <input type="text" placeholder="Otros" ng-model="data.Otros" name="Otros">  
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Cuales parciales</span>
+                    <input type="text" placeholder="CualesParciales" ng-model="data.CualesParciales" name="Cuales parciales">  
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">De cuales planos</span>
+                    <input type="text" placeholder="De cuales planos" ng-model="data.CualesPlanos" name="CualesPlanos">  
+                </label>
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('3_4')">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

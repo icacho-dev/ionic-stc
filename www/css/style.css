@@ -1,0 +1,99 @@
+/* Empty. Add your own CSS if you like */
+.setec-sm {
+	background:url(../img/menu-bg.jpg)!important;
+}
+
+.setec-cLight {
+	color: white;
+}
+
+.setec-bGrayLight {
+	background:#EEEEEE;
+	color:#666;
+	font-size: small;
+}
+
+.setec-cGrayLight {
+	color: #00f0ff; 
+}
+
+.setec-cGreenLow {
+	color:#CCDD66;	
+}
+
+.setec-bGreenDark {
+	background:#666;
+	color:white;
+}
+
+.setec-bGreenLight {
+	background:#008855;
+	color:white;
+}
+
+.setec-sm-title-sup {
+	display:block;
+}
+
+.setec-sm-title-sub {
+	font-size:small;	
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - */
+.item-input{
+  display: block !important;
+}
+
+.input-label {
+max-width: 100% !important;
+width: 100% !important;
+}
+
+
+.item-select select {
+position: relative !important;
+}
+
+
+.item-select:after {
+top: 60% !important;
+
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - */
+.dark {
+  background-color: #2B2C2D !important;
+  color: #FFFFFF;
+}
+.dark .scroll-content {
+  background-color: #2B2C2D !important;
+}
+.dark .item {
+  background-color: #2B2C2D;
+  border: none;
+  border-top: 1px solid #464646;
+  border-bottom: 2px solid #333333;
+  padding: 20px;
+  max-height: none;
+}
+.dark .item:first-child {
+  border-top: 1px solid black;
+}
+.dark .item:last-child {
+  border-bottom: 1px solid #333333;
+}
+.dark .item.current {
+  background-color: #262727 !important;
+  border-top: 1px solid #464646 !important;
+  border-bottom: 2px solid #333333 !important;
+}
+.dark .item.current p, .dark .item.current h3 {
+  opacity: .7;
+}
+.dark h2,
+.dark h3,
+.dark p {
+  color: #F0F1F1;
+}
+
+.dark-head {
+  text-decoration: none;
+}

@@ -1,0 +1,67 @@
+﻿<ion-view ng-controller="LevCtrl" title="2 Datos del Inmueble" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraSimpleCtrl">
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 2.1 : UBICACION -->
+                <ion-item class="item-divider item-calm">2.1 Ubicación</ion-item>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Calle</span>
+                    <input type="text" placeholder="Calle" ng-model="data.Calle" name="Calle">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">No. Exterior</span>
+                    <input type="text" placeholder="No. Exterior" ng-model="data.NumExt" name="NumExt">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">No. Interior</span>
+                    <input type="text" placeholder="No. Interior" ng-model="data.NumInt" name="NumInt">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">C.P.</span>
+                    <input type="text" placeholder="C.P." ng-model="data.CP" name="CP">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Colonia</span>
+                    <input type="text" placeholder="Colonia" ng-model="data.Colonia" name="Colonia">
+                </label>
+                <!--<label class="item item-input item-stacked-label">
+                    <span class="label ">Municipio</span>
+                    <input type="text" placeholder="Municipio" ng-model="data.Municipio" name="Municipio">
+                </label>-->
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Localidad</span>
+                    <input type="text" placeholder="Localidad" ng-model="data.Localidad" name="Localidad">
+                </label>
+                <!-- FORM : GEOREFERENCIA -->
+                <ion-item class="item-divider">Georeferencia</ion-item>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Grados (latitud)</span>
+                    <input type="text" placeholder="Grados" ng-model="data.GradosLat" name="GradosLat">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Minutos (latitud)</span>
+                    <input type="text" placeholder="Minutos" ng-model="data.MinutosLat" name="MinutosLat">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Segundos (latitud)</span>
+                    <input type="text" placeholder="Segundos" ng-model="data.SegundosLat" name="SegundosLat">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Grados (longitud)</span>
+                    <input type="text" placeholder="Grados" ng-model="data.GradosLng" name="GradosLng">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Minutos (longitud)</span>
+                    <input type="text" placeholder="Minutos" ng-model="data.MinutosLng" name="MinutosLng">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Segundos (longitud)</span>
+                    <input type="text" placeholder="Segundos" ng-model="data.SegundosLng" name="SegundosLng">
+                </label>
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('2_2')">Validar</button>
+                </ion-item>
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

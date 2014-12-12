@@ -1,0 +1,75 @@
+﻿<ion-view ng-controller="LevCtrl" title="3 Características del Inmueble" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraSimpleCtrl">
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 3.1 : FISICAS -->
+                <ion-item class="item-divider item-calm">3.1 Físicas</ion-item>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Superficie de terreno (m2)</span>
+                    <input type="text" placeholder="m2" ng-model="data.CaracInmSuperficie" name="CaracInmSuperficie" required>  
+                </label>
+                <label class="item item-input item-select item-stacked-label">
+                    <div class="input-label">
+                      Fuente de información
+                    </div>
+                    <select ng-model="data.FK_IdFuenteInformacion" ng-options="c.value for c in data.FK_IdFuenteInformacionTerrenoSelect" required></select>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Cual</span>
+                    <input type="text" placeholder="Si la Fuente de Información es 'Otro'" ng-model="data.FuenteInformacionOtro" name="FuenteInformacionOtro">  
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Edad de contrucción (años)</span>
+                    <input type="text" placeholder="años" ng-model="data.CaracInmEdadConstruccion" name="CaracInmEdadConstruccion">  
+                </label>
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                       Características del terreno
+                    </div>
+                    <select ng-model="data.FK_IdCaracteristicasTerreno" ng-options="c.value for c in data.FK_IdCaracteristicasTerrenoSelect"></select>
+                </label>                
+                <!-- pendiente : kcho , componente con boton de + -->
+                     
+                        
+                <div class="card">                    
+                    <ion-item class="item-divider item-calm">Dimensiones y configuración de sus construcciones</ion-item> 
+                    <div class="item item-text-wrap item-stable">
+                        <div class="card"> 
+                            <ion-item class="item-divider item-dark">Cuerpo</ion-item> 
+                            <label class="item item-input item-select">
+                                <div class="input-label">
+                                   Institución
+                                </div>
+                                <select ng-model="data.FK_IdInmuebleInstitucion" ng-options="c.value for c in data.FK_IdInmuebleInstitucionSelect"></select>
+                            </label> 
+                            <label class="item item-input item-stacked-label">
+                                <span class="label ">No. de Niveles</span>
+                                <input type="number" placeholder="No. de Niveles" ng-model="data.NumeroNiveles" name="NumeroNiveles">
+                            </label>
+                            <ion-item class="item item-input item-stacked-label">
+                                <span class="label ">Area (m2)</span>
+                                <input type="number" placeholder="Area (m2)" ng-model="data.Area" name="Area">
+                            </ion-item>
+                            <ion-item class="item-divider item-light">
+                            <button class="button button-small button-outline button-positive icon-right ion-eye">Ver detalle</button>
+                            <button class="button button-small button-outline button-assertive icon-right ion-close">Borrar Cuerpo</button></ion-item> 
+                        </div>  
+                    </div>
+                    <div class="item item-divider item-stable">
+                        <button class="button button-block button-positive icon-left ion-ios7-plus">
+                          Agregar
+                        </button>
+                    </div>
+                </div>
+                <!--/pendiente : kcho , componente con boton de + -->
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Notas</span>
+                    <textarea placeholder="Notas" ng-model="data.Notas" name="Notas" ></textarea>
+                </label>
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('3_2')">Validar</button>
+                </ion-item>
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

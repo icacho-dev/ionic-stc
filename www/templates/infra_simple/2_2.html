@@ -1,0 +1,23 @@
+﻿<ion-view ng-controller="LevCtrl" title="2 Datos del Inmueble" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraSimpleCtrl">
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 2.2 : SERVICIOS PUBLICOS -->
+                <ion-item class="item-divider item-calm">2.2 Servicios Publicos</ion-item>
+                <ion-item class="item-divider">Vias de acceso importantes al inmueble</ion-item>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.ServPubTienePrimarias" name="ServPubTienePrimarias">Primarias</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.ServPubTieneSecundarias" name="ServPubTieneSecundarias">Secundarias</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.ServPubTieneTerciarias" name="ServPubTieneTerciarias">Terciarias</ion-toggle>
+                <ion-item class="item-divider">Servicios</ion-item>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.ServPubTieneTransportePublico" name="ServPubTieneTransportePublico">Transporte Público</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.ServPubTieneAguaPotable" name="ServPubTieneAguaPotable">Suministro de Agua potable</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.ServPubTieneDrenaje" name="ServPubTieneDrenaje">Drenaje</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" ng-model="data.ServPubTieneElectricidad" name="ServPubTieneElectricidad">Electricidad</ion-toggle>
+                <ion-toggle toggle-class="toggle-positive" nng-model="data.ServPubTieneTelefonia" name="ServPubTieneTelefonia">Telefonía</ion-toggle>
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('3_1')">Validar</button>
+                </ion-item>
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

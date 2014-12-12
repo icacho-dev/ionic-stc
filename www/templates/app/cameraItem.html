@@ -1,0 +1,20 @@
+﻿<div>
+    <div class="list card" ng-repeat="i in items track by $index">
+        <div class="item item-divider item-icon-right item-icon-left text-center">
+            <a ng-click="getPicture()">
+                <i class="icon ion-ios7-eye-outline "></i>
+            </a>
+            <a ng-click="delete(i)">
+                <i class="icon ion-ios7-close-empty assertive"></i>
+            </a>
+            Fotografía: {{$index + 1}}
+        </div>
+        <div class="item item-image">
+            <img ng-src="{{i.src}}" style="max-width: 100%" />
+        </div>
+        <label class="item item-input item-floating-label">
+            <span class="input-label">Descripcion</span>
+            <input type="text" placeholder="Descripcion" ng-model="i.desc">
+        </label>
+    </div>   
+</div>
