@@ -1,0 +1,104 @@
+<ion-view ng-controller="LevCtrl" title="{{menuRight[28].title}}" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <div class="list card">
+                    <div class="item item-dark item-icon-right">
+                    <i class="icon ion-clipboard"></i>
+                    {{menuRight[28].title}}</div>
+                    <div class="item item-body item-stable">
+                        <div>
+                            <p>Para uso exclusivo de inmuebles donde se ubique Salas de Juicios Orales Penales</p>
+                        </div>                
+                    </div>
+                </div>
+
+                <!-- card 1-->
+                <div class="card"> 
+                    <label class="item item-input item-select item-stacked-label">
+                        <div class="input-label">
+                          Año de Construcción y/o adaptación
+                        </div>
+                        <select ng-model="data.FK_IdAnios" ng-options="c.value for c in data.FK_IdAniosSelect"></select>
+                    </label>
+                </div>
+                <!--./card 1 -->
+
+                <!-- FORM 1 : ANEXO 5.1 -->
+                <div class="card">
+                  <div class="item item-calm item-text-wrap">
+                    {{menuRight[29].title}}
+                  </div>
+                </div>
+                
+                <!-- card 2 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.5.1.1 Mobiliario y Equipamiento</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilMesaTrabajoJueces" name="MobilMesaTrabajoJueces">Mesa estrado para jueces</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilMesaMPDefensoria" name="MobilMesaMPDefensoria">Mesa para MP y Defensoría</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilMesaTestigos" name="MobilMesaTestigos">Mesa para testigos y encargado de sala</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilMesaDefensoria" name="MobilMesaDefensoria">Mesa para Defensoría</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilSillaJuez" name="MobilSillaJuez">Silla de Juez</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilButacasAncladas" name="MobilButacasAncladas">Butacas para audiencia ancladas al piso</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilBanderillaDivisoria" name="MobilBanderillaDivisoria">Banderilla divisoria baja con sistema de control</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilTV" name="MobilTV">TV</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilDVD" name="MobilDVD">Reproductor de DVD</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilProyectorOpacos" name="MobilProyectorOpacos">Proyector de cuerpos opacos</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilSemaforoGrabacion" name="MobilSemaforoGrabacion">Semáforo de grabación</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilMicrofonoAmbiental" name="MobilMicrofonoAmbiental">Micrófono ambiental</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilCamaraCCTV" name="MobilCamaraCCTV">Cámara de CCTV</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilBanderaNacional" name="MobilBanderaNacional">Bandera Nacional</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilEscudoNacional" name="MobilEscudoNacional">Escudo Nacional</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilRelojFechaHora" name="MobilRelojFechaHora">Reloj con fecha y hora</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilAlarmaVisualSonora" name="MobilAlarmaVisualSonora">Alarma visual y sonora</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilEstacionTrabajoCompu" name="MobilEstacionTrabajoCompu">Estación de trabajo (computadora)</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilCierrePuerta" name="MobilCierrePuerta">Cierre de Puerta</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.MobilBotonPanico" name="MobilBotonPanico">Botón de pánico</ion-toggle>
+
+                </div>
+                <!--./card 2 -->
+                <div class="card">
+                  <div class="item item-calm item-text-wrap">
+                    A.5.1.2 Instalaciones
+                  </div>
+                </div>
+                <!-- card 3 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.5.1.2.1 Instalación eléctrica</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.ElectricaContactosRegulados" name="ElectricaContactosRegulados">Contactos regulados</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.ElectricaTomasCorriente" name="ElectricaTomasCorriente">Tomas de corriente</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.ElectricaIluminacion" name="ElectricaIluminacion">Iluminación</ion-toggle>                              
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.ElectricaCumpleNiveles" name="ElectricaCumpleNiveles">Cumple con los niveles de iluminación</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.ElectricaIluminacionEmergencia" name="ElectricaIluminacionEmergencia">Iluminación de emergencia</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.ElectricaTablerosAutomatizados" name="ElectricaTablerosAutomatizados">Tableros automatizados para ahorro de energía</ion-toggle>  
+
+                </div>
+                <!--./card 3 -->
+                <!-- card 4 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.5.1.2.2 Instalación para detección y supresión de incendio</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.IncendioDeteccion" name="IncendioDeteccion">Detección de incendio</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.IncendioSupresion" name="IncendioSupresion">Sistema de supresión de incendio</ion-toggle>
+
+                </div>
+                <!--./card 4 -->
+                <!-- card 5 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.5.1.2.3 Instalación de Aire Acondicionado</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AireAcondicionado" name="AireAcondicionado">Instalación de Aire Acondicionado</ion-toggle>
+
+                </div>
+                <!--./card 5 -->
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('a_4_2')">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

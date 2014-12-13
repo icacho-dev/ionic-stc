@@ -292,6 +292,19 @@
           title: 'A.4.2 Requerimientos de equipamiento para espacios de Bodega o Almacén de Evidencias',
           ready: false,
           msg: 'Pendiente'
+      },
+      {
+          page: 'a_5_1',
+          title: 'Anexo 5',
+          ready: false,
+          msg: 'Pendiente',
+          divider: true
+      },
+      {
+          page: 'a_5_1',
+          title: 'A.5.1 Requerimientos de Instalaciones para Salas de Juicios Orales',
+          ready: false,
+          msg: 'Pendiente'
       }
     ];
 

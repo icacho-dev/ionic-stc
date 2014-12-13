@@ -144,7 +144,23 @@
                     {key:1 , value:'MaterialFachada 1'} ,
                     {key:2 , value:'MaterialFachada 2'} ,
                     {key:3 , value:'MaterialFachada 3'} 
-                ]                 
+                ],
+                dataJson.FK_IdAniosSelect = [
+                    {key:1 , value:'2001'} ,
+                    {key:2 , value:'2002'} ,
+                    {key:3 , value:'2003'} ,
+                    {key:4 , value:'2004'} ,
+                    {key:5 , value:'2005'} ,
+                    {key:6 , value:'2006'} ,
+                    {key:7 , value:'2007'} ,
+                    {key:8 , value:'2008'} ,
+                    {key:9 , value:'2009'} ,
+                    {key:10 , value:'2010'} ,
+                    {key:11 , value:'2011'} ,
+                    {key:12 , value:'2012'} ,
+                    {key:13 , value:'2013'} ,
+                    {key:14 , value:'2014'} 
+                ]                
                 ;
 
                 break;
