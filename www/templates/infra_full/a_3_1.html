@@ -44,10 +44,59 @@
                 </div>
                 <!--./card 2 -->
 
+                <!-- card 3 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.3.1.3 Instalación para detección y supresión de incendio</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.IncendioDeteccion" name="IncendioDeteccion">Detección de incendio</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.IncendioSupresion" name="IncendioSupresion">Sistema de supresión de incendio</ion-toggle>
+
+                </div>
+                <!--./card 3 -->
+
+                <!-- card 4 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.3.1.4 Instalación de Aire Acondicionado</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AireAcondicionadoInstalacion" name="AireAcondicionadoInstalacion">Instalación de Aire Acondicionado</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AireAcondicionadoCortinas" name="AireAcondicionadoCortinas">Cortinas de aire</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AireAcondicionadoEsclusas" name="AireAcondicionadoEsclusas">Esclusas biológicas</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AireAcondicionadoPresicion" name="AireAcondicionadoPresicion">Aire de precisión</ion-toggle>
+
+                </div>
+                <!--./card 4 -->
+
+                <!-- card 5 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.3.1.5 Instalaciones especiales</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EspecialesHidrogeno" name="EspecialesHidrogeno">Instalación de hidrógeno</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EspecialesNitrogeno" name="EspecialesNitrogeno">Instalación de nitrógeno cromatográfico</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EspecialesArgon" name="EspecialesArgon">Instalación de argón</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EspecialesAirePresion" name="EspecialesAirePresion">Instalación de aire a presión</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EspecialesHelio" name="EspecialesHelio">Instalación de helio</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EspecialesNitrogenoLiquido" name="EspecialesNitrogenoLiquido">Instalación de nitrógeno líquido</ion-toggle>
+
+                </div>
+                <!--./card 5 -->
+
+                <!-- card 6 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.3.1.6 Instalaciones de seguridad</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.SeguridadAccesos" name="SeguridadAccesos">Control de accesos</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.SeguridadArcosDetectoresMetal" name="SeguridadArcosDetectoresMetal">Arcos detectores de metal</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.SeguridadEsclusas" name="SeguridadEsclusas">Esclusas de seguridad</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.SeguridadClavesXOperador" name="SeguridadClavesXOperador">Claves de seguridad por Operador</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.SeguridadRegistroDigitalIngreso" name="SeguridadRegistroDigitalIngreso">Registro digital del ingreso y salida del personal operativo</ion-toggle>
+
+                </div>
+                <!--./card 6 -->
+
 
                 <!-- btn : guardar -->
                 <ion-item class="item-divider">
-                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('a_2_1')">Validar</button>
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('a_3_2')">Validar</button>
                 </ion-item>
                 <!--/btn : guardar -->
             </ion-list>
