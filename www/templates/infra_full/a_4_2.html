@@ -1,0 +1,64 @@
+<ion-view ng-controller="LevCtrl" title="{{menuRight[25].title}}" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 2.4.6 : INSTALACIÓN DE GAS -->
+                <ion-item class="item-divider item-calm">{{menuRight[27].title}}</ion-item>
+
+                <ion-item class="item-divider item-stable">A.4.2.1 Equipamiento</ion-item>
+
+                <!-- card 1 -->
+                <div class="card">       
+                    
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EquipamientoTieneEstanteria" class="item-stable" >Estantería</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EquipamientoModular">Modular</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EquipamientoMovil">Movil</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EquipamientoRackAmericano">Rack americano</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EquipamientoAlmacenRotativo">Almacén rotativo</ion-toggle>
+
+                </div>
+                <!--./card 1 -->
+                <!-- card 2 -->
+                <div class="card">       
+                    
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EquipamientoTieneRefrigeracion" class="item-stable" >Refrigeración</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EquipamientoRefrigeracionModular">Cámara de refrigeración modular</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EquipamientoCongeladorRefrigerador">Congelador y refrigerador</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EquipamientoRefrigeradorUnaPuerta">Refrigerador una puerta</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EquipamientoRefrigeradorDosPuerta">Refrigerador dos puertas</ion-toggle>
+
+                </div>
+                <!--./card 2 -->
+                <!-- card 3 -->
+                <div class="card">       
+                    
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EquipamientoSeguridadResguardo" class="item-stable" >Seguridad y resguardo</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EquipamientoCajaFuerte">Caja fuerte básica</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EquipamientoBovedaSeguridad">Bóveda de seguridad</ion-toggle>
+                    
+                </div>
+                <!--./card 3 -->
+
+                <!-- card 4 -->
+                <div class="card">       
+                    
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EquipamientoGabineteSecado" >Gabinete de secado</ion-toggle>
+                    
+                </div>
+                <!--./card 4 -->
+
+
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Notas</span>
+                    <textarea placeholder="Notas" ng-model="data.Notas" rows="10" ></textarea>
+                </label>
+                
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="saveLev()">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

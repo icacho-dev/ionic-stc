@@ -273,6 +273,25 @@
           title: 'A.3.2 Acabados',
           ready: false,
           msg: 'Pendiente'
+      },
+      {
+          page: 'a_4_1',
+          title: 'Anexo 4',
+          ready: false,
+          msg: 'Pendiente',
+          divider: true
+      },
+      {
+          page: 'a_4_1',
+          title: 'A.4.1 Requerimientos de Instalaciones para espacios de Bodega o Almacén de Evidencias',
+          ready: false,
+          msg: 'Pendiente'
+      },
+      {
+          page: 'a_4_2',
+          title: 'A.4.2 Requerimientos de equipamiento para espacios de Bodega o Almacén de Evidencias',
+          ready: false,
+          msg: 'Pendiente'
       }
     ];
 

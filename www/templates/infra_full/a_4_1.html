@@ -1,0 +1,126 @@
+<ion-view ng-controller="LevCtrl" title="{{menuRight[25].title}}" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <div class="list card">
+                    <div class="item item-dark item-icon-right">
+                    <i class="icon ion-clipboard"></i>
+                    {{menuRight[25].title}}</div>
+                    <div class="item item-body item-stable">
+                    <!-- pendientes:kcho -->
+                        <div>
+                            <p>Para uso exclusivo de inmuebles donde se ubique Bodega o Almacén de Evidencias</p>
+                        </div>                
+                    </div>
+                </div>
+                <!-- FORM 1 : ANEXO 1 -->
+                <div class="card">
+                  <div class="item item-calm item-text-wrap">
+                    {{menuRight[26].title}}
+                  </div>
+                </div>
+                <!-- card 1-->
+                <div class="card">       
+                    <ion-item class="item-stable">A.4.1.1 Predio</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.PredioUbicacionGeografica" name="PredioUbicacionGeografica">Ubicación geográfica segura</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.PredioSuseptibleInundacion" name="PredioSuseptibleInundacion">Susceptibilidad de inundación</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.PredioSuseptibleDerrumbe" name="PredioSuseptibleDerrumbe">Susceptibilidad de derrumbe</ion-toggle>       
+                </div>
+                <!--./card 1 -->
+                <!-- card 2 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.4.1.2 Fachada</ion-item>
+
+                    <label class="item item-input item-select item-stacked-label">
+                        <div class="input-label">
+                          Material de muros
+                        </div>
+                        <select ng-model="data.FK_IdMaterialFachada__INFRA" ng-options="c.value for c in data.FK_IdMaterialFachadaSelect"></select>
+                    </label> 
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.FachadaAislamientoTermico" name="FachadaAislamientoTermico">Aislamiento térmico</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.FachadaMaterialesRetardantesFuego" name="FachadaMaterialesRetardantesFuego">Materiales retardantes al fuego</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.FachadaBlidaje" name="FachadaBlidaje">Blindaje</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.FachadaResistenciaMedioCalibre" name="FachadaResistenciaMedioCalibre">Resistencia a danos por arma de fuego de mediano calibre</ion-toggle>
+
+                </div>
+                <!--./card 2 -->
+                <!-- card 3 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.4.1.3 Techumbre</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.TechumbreAislamientoTermico">Aislamiento térmico</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.TechumbreMaterialesRetardantesFuego">Materiales retardantes al fuego</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.TechumbreTechoDosAguas">Construcción del techo a dos aguas</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.TechumbreImpermiabilizacion">Impermeabilización</ion-toggle>                   
+
+                </div>
+                <!--./card 3 -->
+                <!-- card 4 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.4.1.4 Acabados</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AcabadosRevestimientoEpoxicos">Revestimiento con agentes epóxicos</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AcabadosRecubiertaAnticorrosivos">Recubierta con pinturas anticorrosivas</ion-toggle>     
+
+                </div>
+                <!--./card 4 -->
+                <!-- card 5 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.4.1.5 Ventilación</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.VentilacionExtraccionAire">Sistema de extracción de aire</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.VentilacionRegulacionHumedad">Regulación de niveles de humedad</ion-toggle>     
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.VentilacionInyeccionAire">Sistema de inyección de aire</ion-toggle>     
+
+                </div>
+                <!--./card 5 -->
+                <!-- card 6 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.4.1.6 Temperatura</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.TemperaturaAireAcondicionado">Aire Acondicionado</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.TemperaturaEqRemotosEnfriamiento">Equipos remotos de enfriamiento</ion-toggle>
+
+                </div>
+                <!--./card 6 -->
+                <!-- card 7 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.4.1.7 Instalaciones especiales</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EspecialesPlantaEmergencia">Planta de emergencia</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EspecialesDeteccionIncendios">Sistema de detección de incendios</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EspecialesMonitoreoCCTV">Sistema de detección de incendios</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EspecialesSupresionIncendios">Sistemas de supresión de incendios</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.EsHumedo">Es humedo</ion-toggle>
+
+                </div>
+                <!--./card 7 -->
+                <!-- card 8 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.4.1.8 Áreas</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AreaMesaControl">Mesa de control</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AreaObjetosAsegurados">Área de objetos asegurados</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AreaAlmacenGeneral">Almacén general</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AreaBovedaArmeria">Bóveda de armería</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AreaBovedaNarcoticos">Bóveda de narcóticos</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AreaCamaraFrigorifica">Cámara frigorífica</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AreaRegistro">Área de registro</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AreaObjetosAseguradosRiesgo">Área de objetos asegurados de riesgo</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AreaBiologicos">Área de biológicos</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AreaBovedaValores">Bóveda de valores</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.AreaBovedaResguardoTmp">Bóveda de resguardo temporal</ion-toggle>
+
+                </div>
+                <!--./card 8 -->
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('a_4_2')">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

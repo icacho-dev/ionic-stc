@@ -139,7 +139,12 @@
                     {key:1 , value:'TipoAcabado 1'} ,
                     {key:2 , value:'TipoAcabado 2'} ,
                     {key:3 , value:'TipoAcabado 3'} 
-                ]                  
+                ],
+                dataJson.FK_IdMaterialFachadaSelect = [
+                    {key:1 , value:'MaterialFachada 1'} ,
+                    {key:2 , value:'MaterialFachada 2'} ,
+                    {key:3 , value:'MaterialFachada 3'} 
+                ]                 
                 ;
 
                 break;
