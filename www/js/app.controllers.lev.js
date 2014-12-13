@@ -254,6 +254,19 @@
           title: 'A.2.4.6 Instalación de gas',
           ready: false,
           msg: 'Pendiente'
+      },
+      {
+          page: 'a_3_1',
+          title: 'Anexo 3',
+          ready: false,
+          msg: 'Pendiente',
+          divider: true
+      },
+      {
+          page: 'a_3_1',
+          title: 'A.3.1 Requerimientos de Instalaciones para espacios de Servicios Periciales',
+          ready: false,
+          msg: 'Pendiente'
       }
     ];
 

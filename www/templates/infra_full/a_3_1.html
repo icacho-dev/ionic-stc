@@ -1,0 +1,56 @@
+<ion-view ng-controller="LevCtrl" title="{{menuRight[22].title}}" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <div class="list card">
+                    <div class="item item-dark item-icon-right">
+                    <i class="icon ion-clipboard"></i>
+                    {{menuRight[22].title}}</div>
+                    <div class="item item-body item-stable">
+                    <!-- pendientes:kcho -->
+                        <div>
+                            <p>Para uso exclusivo de inmuebles donde se ubiquen Servicios Periciales</p>
+                        </div>                
+                    </div>
+                </div>
+                <!-- FORM 1 : ANEXO 1 -->
+                <div class="card">
+                  <div class="item item-calm item-text-wrap">
+                    {{menuRight[23].title}}
+                  </div>
+                </div>
+                <!-- card 1-->
+                <div class="card">       
+                    <ion-item class="item-stable">A.3.1.1 Instalación Eléctrica</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.ElectricaContactosRegulados" name="ElectricaContactosRegulados">Contactos regulados</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.ElectricaTomasCorriente" name="ElectricaTomasCorriente">Tomas de corriente</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.ElectricaIluminacion" name="ElectricaIluminacion">Iluminación</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.ElectricaEmergencia" name="ElectricaEmergencia">Iluminación de emergencia</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.ElectricaCumpleNiveles" name="ElectricaCumpleNiveles">Cumple con los niveles de iluminación</ion-toggle>
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.ElectricaTableros" name="ElectricaTableros">Tableros automatizados para ahorro de energía</ion-toggle>         
+                </div>
+                <!--./card 1 -->
+
+                <!-- card 2 -->
+                <div class="card">       
+                    <ion-item class="item-stable">A.3.1.2 Instalación hidráulica y Sanitaria</ion-item>
+
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.HidraulicaTomasEmergencia" name="HidraulicaTomasEmergencia">Tomas hidraúlicas de emergencia</ion-toggle>  
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.HidraulicaRegaderas" name="HidraulicaRegaderas">Regaderas</ion-toggle>  
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.HidraulicaLavaojos" name="HidraulicaLavaojos">Lavaojos</ion-toggle>  
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.HidraulicaRecoleccionFluidos" name="HidraulicaRecoleccionFluidos">Sistema de recolección de fluidos</ion-toggle>  
+                    <ion-toggle toggle-class="toggle-positive" ng-model="data.HidraulicaTratamientoResiduos" name="HidraulicaTratamientoResiduos">Sistema de tratamiento de residuos (fluidos)</ion-toggle>     
+                </div>
+                <!--./card 2 -->
+
+
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('a_2_1')">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>
