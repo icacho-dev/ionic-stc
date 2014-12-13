@@ -1,8 +1,19 @@
 <ion-view ng-controller="LevCtrl" title="{{menuRight[9].title}}" ng-init="data = dataJson">
     <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">
+        <div class="list card">
+            <div class="item item-dark item-icon-right">
+            <i class="icon ion-clipboard"></i>
+            {{menuRight[9].title}}</div>
+            <div class="item item-body item-stable">
+            <!-- pendientes:kcho -->
+                <div>
+                    <p>Identificación de espacios físicos requeridos para la implementación del NSJP</p>
+                </div>                
+            </div>
+        </div>
         <form novalidate name="form">            
             <ion-list class="item-text-wrap">
-                <!-- FORM 4.1 : POTENCIALIDAD DE INFRAESTRUCTURA PARA LA IMPLEMENTACIÓN DEL NSJP -->
+                <!-- FORM 1 : ANEXO 1 -->
                 <ion-item class="item-divider item-calm">{{menuRight[10].title}}</ion-item>
 
                 <ion-toggle toggle-class="toggle-positive" ng-model="data.EspacioUnidadAtencionTemprana" name="EspacioUnidadAtencionTemprana">Unidad de Atención Temprana</ion-toggle>
@@ -141,7 +152,7 @@
 
                 <!-- btn : guardar -->
                 <ion-item class="item-divider">
-                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('1_2')">Validar</button>
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('a_2_1')">Validar</button>
                 </ion-item>
                 <!--/btn : guardar -->
             </ion-list>

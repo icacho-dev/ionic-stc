@@ -1,0 +1,39 @@
+<ion-view ng-controller="LevCtrl" title="{{menuRight[11].title}}" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">
+        <div class="list card">
+            <div class="item item-dark item-icon-right">
+            <i class="icon ion-clipboard"></i>
+            {{menuRight[11].title}}</div>
+            <div class="item item-body item-stable">
+            <!-- pendientes:kcho -->
+                <div>
+                    <p>Características de las Instalaciones</p>
+                </div>                
+            </div>
+        </div>
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 2.1 : INSTALACIÓN HIDRÁULICA -->
+                <ion-item class="item-divider item-calm">{{menuRight[12].title}}</ion-item>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Características</span>
+                    <textarea placeholder="Características" ng-model="data.CaracteristicasHidraulicas" rows="10" name="CaracteristicasHidraulicas" ></textarea>
+                </label>
+                <label class="item item-input item-select item-stacked-label">
+                    <div class="input-label">
+                      Situacion del Imueble
+                    </div>
+                    <select ng-model="data.FK_IdEstadoFisico_Alias_Hidraulicas__INFRA" ng-options="c.value for c in data.FK_IdEstadoFisicoSelect" name="FK_IdEstadoFisico_Alias_Hidraulicas__INFRA"></select>
+                </label>
+
+                
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('a_2_2')">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

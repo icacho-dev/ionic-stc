@@ -1,0 +1,26 @@
+<ion-view ng-controller="LevCtrl" title="{{menuRight[11].title}}" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">        
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 2.2 : INSTALACIÓN SANITARIA -->
+                <ion-item class="item-divider item-calm">{{menuRight[13].title}}</ion-item>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Características</span>
+                    <textarea placeholder="Características" ng-model="data.CaracteristicasSanitarias" rows="10" name="CaracteristicasSanitarias" ></textarea>
+                </label>
+                <label class="item item-input item-select item-stacked-label">
+                    <div class="input-label">
+                      Situacion del Imueble
+                    </div>
+                    <select ng-model="data.FK_IdEstadoFisico_Alias_Sanitarias__INFRA" ng-options="c.value for c in data.FK_IdEstadoFisicoSelect" name="FK_IdEstadoFisico_Alias_Sanitarias__INFRA"></select>
+                </label>
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('a_2_3')">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

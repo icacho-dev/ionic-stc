@@ -84,6 +84,21 @@
                     {key:1 , value:'Adolescente'} ,
                     {key:2 , value:'Mujeres'} ,
                     {key:3 , value:'Otros'} 
+                ],
+                dataJson.FK_IdTipoInstalacionSelect = [
+                    {key:1 , value:'Cableado'} ,
+                    {key:2 , value:'Ducteria'} ,
+                    {key:3 , value:'Soportería'} 
+                ],
+                dataJson.FK_IdTipoEquipoRespaldoSelect = [
+                    {key:1 , value:'tipo1'} ,
+                    {key:2 , value:'tipo2'} ,
+                    {key:3 , value:'tipo3'} 
+                ],
+                dataJson.FK_IdMarcaSelect = [
+                    {key:1 , value:'marca 1'} ,
+                    {key:2 , value:'marca 2'} ,
+                    {key:3 , value:'marca 3'} 
                 ]
                 ;
 

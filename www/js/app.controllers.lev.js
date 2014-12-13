@@ -186,6 +186,38 @@
           title: 'A.1 ¿El inmueble cuenta con los siguientes espacios físicos?',
           ready: false,
           msg: 'Pendiente'
+      },
+      {
+          page: 'a_2_1',
+          title: 'Anexo 2',
+          ready: false,
+          msg: 'Pendiente',
+          divider: true
+      },
+      {
+          page: 'a_2_1',
+          title: 'A.2.1 Instalación hidráulica',
+          ready: false,
+          msg: 'Pendiente'
+      },
+      {
+          page: 'a_2_2',
+          title: 'A.2.2 Instalación sanitaria',
+          ready: false,
+          msg: 'Pendiente'
+      },
+      {
+          page: 'a_2_3',
+          title: 'A.2.3 Instalación eléctrica',
+          ready: false,
+          msg: 'Pendiente'
+      },
+      {
+          page: 'a_2_4',
+          title: 'A.2.4 Instalaciones especiales',
+          ready: false,
+          msg: 'Pendiente',
+          divider: true
       }
     ];
 
