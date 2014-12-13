@@ -188,7 +188,7 @@
           msg: 'Pendiente'
       },
       {
-          page: 'a_2_1',
+          page: 'a_2',
           title: 'Anexo 2',
           ready: false,
           msg: 'Pendiente',
@@ -213,11 +213,47 @@
           msg: 'Pendiente'
       },
       {
-          page: 'a_2_4',
+          page: 'a_2_4_1',
           title: 'A.2.4 Instalaciones especiales',
           ready: false,
           msg: 'Pendiente',
           divider: true
+      },
+      {
+          page: 'a_2_4_1',
+          title: 'A.2.4.1 Circuito Cerrado de Televisión (CCTV)',
+          ready: false,
+          msg: 'Pendiente'
+      },
+      {
+          page: 'a_2_4_2',
+          title: 'A.2.4.2 Aire Acondicionado',
+          ready: false,
+          msg: 'Pendiente'
+      },
+      {
+          page: 'a_2_4_3',
+          title: 'A.2.4.3 Elevadores',
+          ready: false,
+          msg: 'Pendiente'
+      },
+      {
+          page: 'a_2_4_4',
+          title: 'A.2.4.4 Control de accesos',
+          ready: false,
+          msg: 'Pendiente'
+      },
+      {
+          page: 'a_2_4_5',
+          title: 'A.2.4.5 Protección contra incendio',
+          ready: false,
+          msg: 'Pendiente'
+      },
+      {
+          page: 'a_2_4_6',
+          title: 'A.2.4.6 Instalación de gas',
+          ready: false,
+          msg: 'Pendiente'
       }
     ];
 

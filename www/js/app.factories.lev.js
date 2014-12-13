@@ -99,7 +99,42 @@
                     {key:1 , value:'marca 1'} ,
                     {key:2 , value:'marca 2'} ,
                     {key:3 , value:'marca 3'} 
-                ]
+                ],
+                dataJson.FK_IdTipoCCTVSelect = [
+                    {key:1 , value:'TipoCCTV 1'} ,
+                    {key:2 , value:'TipoCCTV 2'} ,
+                    {key:3 , value:'TipoCCTV 3'} 
+                ],
+                dataJson.FK_IdTipoAireSelect = [
+                    {key:1 , value:'TipoAire 1'} ,
+                    {key:2 , value:'TipoAire 2'} ,
+                    {key:3 , value:'TipoAire 3'} 
+                ],
+                dataJson.FK_IdTipoControlAccesoSelect = [
+                    {key:1 , value:'TipoControlAcceso 1'} ,
+                    {key:2 , value:'TipoControlAcceso 2'} ,
+                    {key:3 , value:'TipoControlAcceso 3'} 
+                ],
+                dataJson.FK_IdTipoAlarmaDeteccionHumoSelect = [
+                    {key:1 , value:'Tipo AlarmaDeteccionHumo 1'} ,
+                    {key:2 , value:'Tipo AlarmaDeteccionHumo 2'} ,
+                    {key:3 , value:'Tipo AlarmaDeteccionHumo 3'} 
+                ],
+                dataJson.FK_IdTipoProteccionContraIncendioSelect = [
+                    {key:1 , value:'Tipo ProteccionContraIncendio 1'} ,
+                    {key:2 , value:'Tipo ProteccionContraIncendio 2'} ,
+                    {key:3 , value:'Tipo ProteccionContraIncendio 3'} 
+                ],
+                dataJson.FK_IdUnidadMedidaSelect = [
+                    {key:1 , value:'UnidadMedida 1'} ,
+                    {key:2 , value:'UnidadMedida 2'} ,
+                    {key:3 , value:'UnidadMedida 3'} 
+                ],
+                dataJson.FK_IdTipoInstalacionGasSelect = [
+                    {key:1 , value:'TipoInstalacionGas 1'} ,
+                    {key:2 , value:'TipoInstalacionGas 2'} ,
+                    {key:3 , value:'TipoInstalacionGas 3'} 
+                ]                   
                 ;
 
                 break;

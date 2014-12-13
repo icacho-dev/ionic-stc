@@ -1,27 +1,16 @@
 <ion-view ng-controller="LevCtrl" title="{{menuRight[11].title}}" ng-init="data = dataJson">
-    <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">        
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">
         <form novalidate name="form">            
             <ion-list class="item-text-wrap">
-                <!-- FORM 2.3 : INSTALACIÓN ELÉCTRICA -->
-                <ion-item class="item-divider item-calm">{{menuRight[14].title}}</ion-item>
+                <!-- FORM 2.4.5 : PROTECCIÓN CONTRA INCENDIO -->
+                <ion-item class="item-divider item-calm">{{menuRight[20].title}}</ion-item>
 
-                <label class="item item-input item-stacked-label">
-                    <span class="label ">Características</span>
-                    <textarea placeholder="Características" ng-model="data.CaracteristicasSanitarias" rows="10" name="CaracteristicasSanitarias" ></textarea>
-                </label>
-                <label class="item item-input item-select item-stacked-label">
-                    <div class="input-label">
-                      Situacion del Imueble
-                    </div>
-                    <select ng-model="data.FK_IdEstadoFisico_Alias_Sanitarias__INFRA" ng-options="c.value for c in data.FK_IdEstadoFisicoSelect" name="FK_IdEstadoFisico_Alias_Sanitarias__INFRA"></select>
-                </label>
-
-                <!-- card -->
-                <div class="card">   
+                <!-- card 1 -->
+                <div class="card">        
                     <!-- notas -->
                     <div class="item item-positive item-icon-right item-text-wrap">
                         <i class="icon ion-ios7-information-outline"></i>
-                         Estado de la instalación
+                         Sistemas de alarma y detección de humo
                     </div>
                     <!--/notas -->  
                     <div class="item item-text-wrap item-stable">
@@ -29,7 +18,7 @@
                         <div class="card" ng-repeat="item in [1,2]"> 
                             
                             <a class="item item-stable item-icon-right" href="#">                                
-                                <strong>Instalación</strong> : {{item}}
+                                <strong>Sistema</strong> : {{item}}
                                 <i class="icon ion-ios7-close-outline"></i>
                             </a>
 
@@ -37,77 +26,12 @@
                                 <div class="input-label">
                                   Tipo
                                 </div>
-                                <select ng-model="data.FK_IdTipoInstalacion" ng-options="c.value for c in data.FK_IdTipoInstalacionSelect" ></select>
-                            </label>
-                            
-                            <label class="item item-input item-select item-stacked-label">
-                                <div class="input-label">
-                                  Condiciones físicas
-                                </div>
-                                <select ng-model="data.FK_IdEstadoFisico_Alias_Electrica" ng-options="c.value for c in data.FK_IdEstadoFisicoSelect"></select>
-                            </label>
-
-                            <label class="item item-input item-stacked-label">
-                                <span class="label ">Observaciones</span>
-                                <textarea placeholder="Observaciones" ng-model="data.Observaciones" rows="10" ></textarea>
-                            </label>
-                        </div> 
-                        <!--./repeat -->
-                    </div>
-                    <div class="item item-divider item-stable">
-                        <button class="button button-block button-positive icon-left ion-ios7-plus">
-                          Agregar instalación
-                        </button>
-                    </div>                    
-                </div>
-                <!--./card -->
-
-                <ion-toggle toggle-class="toggle-positive" ng-model="data.TieneEquiposRespaldoEnergia">Cuenta con equipos de respaldo de energía</ion-toggle>
-
-                <!-- card 2 -->
-                <div class="card">        
-                    <!-- notas -->
-                    <div class="item item-positive item-icon-right item-text-wrap">
-                        <i class="icon ion-ios7-information-outline"></i>
-                         Equipos de respaldo de energía
-                    </div>
-                    <!--/notas -->  
-                    <div class="item item-text-wrap item-stable">
-                        <!-- repeat -->
-                        <div class="card" ng-repeat="item in [1,2,3]"> 
-                            
-                            <a class="item item-stable item-icon-right" href="#">                                
-                                <strong>Equipo de energía</strong> : {{item}}
-                                <i class="icon ion-ios7-close-outline"></i>
-                            </a>
-                            
-                            <label class="item item-input item-select item-stacked-label">
-                                <div class="input-label">
-                                  Tipo
-                                </div>
-                                <select ng-model="data.FK_IdTipoEquipoRespaldo" ng-options="c.value for c in data.FK_IdTipoEquipoRespaldoSelect"></select>
-                            </label>
-
-                            <label class="item item-input item-stacked-label">
-                                <span class="label ">Número de equipos</span>
-                                <input type="tel" placeholder="Número de equipos" ng-model="data.NumeroEquipos" name="NumeroEquipos">
+                                <select ng-model="data.PK_IdTipoAlarmaDeteccionHumo" ng-options="c.value for c in data.FK_IdTipoAlarmaDeteccionHumoSelect"></select>
                             </label>
 
                             <label class="item item-input item-select item-stacked-label">
                                 <div class="input-label">
-                                  Marca
-                                </div>
-                                <select ng-model="data.FK_IdMarca__GRAL" ng-options="c.value for c in data.FK_IdMarcaSelect"></select>
-                            </label>
-
-                            <label class="item item-input item-stacked-label">
-                                <span class="label ">Capacidad</span>
-                                <input type="tel" placeholder="Capacidad" ng-model="data.Capacidad" name="Capacidad">
-                            </label>
-
-                            <label class="item item-input item-select item-stacked-label">
-                                <div class="input-label">
-                                  Condiciones físicas
+                                  Estado físico
                                 </div>
                                 <select ng-model="data.FK_IdEstadoFisico__INFRA" ng-options="c.value for c in data.FK_IdEstadoFisicoSelect"></select>
                             </label>
@@ -121,11 +45,71 @@
                         </button>
                     </div>                    
                 </div>
-                <!--./card 2 -->                
+                <!--./card 1 -->
 
+                <!-- card 2 -->
+                <div class="card">        
+                    <!-- notas -->
+                    <div class="item item-positive item-icon-right item-text-wrap">
+                        <i class="icon ion-ios7-information-outline"></i>
+                         Protección contra incendios
+                    </div>
+                    <!--/notas -->  
+                    <div class="item item-text-wrap item-stable">
+                        <!-- repeat -->
+                        <div class="card" ng-repeat="item in [1,2]"> 
+                            
+                            <a class="item item-stable item-icon-right" href="#">                                
+                                <strong>Equipo</strong> : {{item}}
+                                <i class="icon ion-ios7-close-outline"></i>
+                            </a>
+
+                            <label class="item item-input item-select item-stacked-label">
+                                <div class="input-label">
+                                  Tipo
+                                </div>
+                                <select ng-model="data.FK_IdTipoProteccionContraIncendio" ng-options="c.value for c in data.FK_IdTipoProteccionContraIncendioSelect"></select>
+                            </label>
+
+                            <label class="item item-input item-stacked-label">
+                                <span class="label ">Numero de equipos</span>
+                                <input type="tel" placeholder="Numero de equipos" ng-model="data.NumeroEquipos" name="NumeroEquipos">
+                            </label>
+
+                            <label class="item item-input item-stacked-label">
+                                <span class="label ">Capacidad</span>
+                                <input type="tel" placeholder="Capacidad" ng-model="data.Capacidad" name="Capacidad">
+                            </label>
+
+                            <label class="item item-input item-select item-stacked-label">
+                                <div class="input-label">
+                                  Unidad de medida
+                                </div>
+                                <select ng-model="data.FK_IdUnidadMedida" ng-options="c.value for c in data.FK_IdUnidadMedidaSelect"></select>
+                            </label>
+
+                            <label class="item item-input item-select item-stacked-label">
+                                <div class="input-label">
+                                  Estado físico
+                                </div>
+                                <select ng-model="data.FK_IdEstadoFisico__INFRA" ng-options="c.value for c in data.FK_IdEstadoFisicoSelect"></select>
+                            </label>
+                            
+                        </div> 
+                        <!--./repeat -->
+                    </div>
+                    <div class="item item-divider item-stable">
+                        <button class="button button-block button-positive icon-left ion-ios7-plus">
+                          Agregar
+                        </button>
+                    </div>                    
+                </div>
+                <!--./card 2 -->
+
+                
                 <!-- btn : guardar -->
                 <ion-item class="item-divider">
-                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('a_2_4_1')">Validar</button>
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('a_2_4_6')">Validar</button>
                 </ion-item>
                 <!--/btn : guardar -->
             </ion-list>
