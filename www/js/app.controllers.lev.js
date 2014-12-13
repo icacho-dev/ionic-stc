@@ -305,6 +305,12 @@
           title: 'A.5.1 Requerimientos de Instalaciones para Salas de Juicios Orales',
           ready: false,
           msg: 'Pendiente'
+      },
+      {
+          page: 'a_5_2',
+          title: 'A.5.2 Requerimientos de funcionalidad de Salas de Juicios Orales',
+          ready: false,
+          msg: 'Pendiente'
       }
     ];
 
