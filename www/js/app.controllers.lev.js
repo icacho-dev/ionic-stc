@@ -267,6 +267,12 @@
           title: 'A.3.1 Requerimientos de Instalaciones para espacios de Servicios Periciales',
           ready: false,
           msg: 'Pendiente'
+      },
+      {
+          page: 'a_3_2',
+          title: 'A.3.2 Acabados',
+          ready: false,
+          msg: 'Pendiente'
       }
     ];
 

@@ -1,0 +1,69 @@
+<ion-view ng-controller="LevCtrl" title="{{menuRight[22].title}}" ng-init="data = dataJson">
+    <ion-content padding="true" class="has-header" ng-controller="LevInfraFull">
+        <form novalidate name="form">            
+            <ion-list class="item-text-wrap">
+                <!-- FORM 2.4.6 : INSTALACIÓN DE GAS -->
+                <ion-item class="item-divider item-calm">{{menuRight[24].title}}</ion-item>
+
+                <!-- card 1 -->
+                <div class="card">        
+                    <!-- notas -->
+                    <div class="item item-positive item-icon-right item-text-wrap">
+                        <i class="icon ion-ios7-information-outline"></i>
+                         Acabados
+                    </div>
+                    <!--/notas -->  
+                    <div class="item item-text-wrap item-stable">
+                        <!-- repeat -->
+                        <div class="card" ng-repeat="item in [1,2]"> 
+                            
+                            <a class="item item-stable item-icon-right" href="#">                                
+                                <strong>Acabado</strong> : {{item}}
+                                <i class="icon ion-ios7-close-outline"></i>
+                            </a>
+
+                            <label class="item item-input item-select item-stacked-label">
+                                <div class="input-label">
+                                  Tipo
+                                </div>
+                                <select ng-model="data.FK_IdTipoAcabado__INFRA" ng-options="c.value for c in data.FK_IdTipoAcabadoSelect"></select>
+                            </label>
+
+                            <label class="item item-input item-stacked-label">
+                                <span class="label ">Tipo de material</span>
+                                <input type="text" placeholder="Tipo de material" ng-model="data.Observaciones" name="Observaciones">
+                            </label>
+
+                            <label class="item item-input item-select item-stacked-label">
+                                <div class="input-label">
+                                  Condiciones físicas
+                                </div>
+                                <select ng-model="data.FK_IdEstadoFisico__INFRA" ng-options="c.value for c in data.FK_IdEstadoFisicoSelect"></select>
+                            </label>
+                            
+                        </div> 
+                        <!--./repeat -->
+                    </div>
+
+                    <div class="item item-divider item-stable">
+                        <button class="button button-block button-positive icon-left ion-ios7-plus">
+                          Agregar
+                        </button>
+                    </div>                    
+                </div>
+                <!--./card 1 -->
+
+                <label class="item item-input item-stacked-label">
+                    <span class="label ">Comentarios de los acabados</span>
+                    <textarea placeholder="Comentarios de los acabados" ng-model="data.ComentariosAcabados" rows="10" name="ComentariosAcabados" ></textarea>
+                </label>
+                
+                <!-- btn : guardar -->
+                <ion-item class="item-divider">
+                    <button ng-disabled="form.$invalid" class="button button-balanced button-block" ng-click="goPage('a_3_1')">Validar</button>
+                </ion-item>
+                <!--/btn : guardar -->
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

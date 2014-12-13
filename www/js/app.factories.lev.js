@@ -134,7 +134,12 @@
                     {key:1 , value:'TipoInstalacionGas 1'} ,
                     {key:2 , value:'TipoInstalacionGas 2'} ,
                     {key:3 , value:'TipoInstalacionGas 3'} 
-                ]                   
+                ],
+                dataJson.FK_IdTipoAcabadoSelect = [
+                    {key:1 , value:'TipoAcabado 1'} ,
+                    {key:2 , value:'TipoAcabado 2'} ,
+                    {key:3 , value:'TipoAcabado 3'} 
+                ]                  
                 ;
 
                 break;
